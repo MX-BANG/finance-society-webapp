@@ -15,7 +15,7 @@ const articles = [
     date: 'February 28, 2024',
     readTime: '5 min read',
     excerpt: 'A comprehensive guide to understanding and navigating market volatility in today\'s dynamic financial landscape.',
-    image: '/articles/market-volatility.jpg',
+    image: '/Magzinetest.jpg',
   },
   {
     id: 2,
@@ -122,7 +122,7 @@ const MagazinePage = () => {
           ))}
         </motion.div>
 
-        {/* Featured Article */}
+        {/* Featured Article
         <motion.div
           className="relative h-[400px] rounded-2xl overflow-hidden mb-16"
           variants={itemVariants}
@@ -136,7 +136,7 @@ const MagazinePage = () => {
             </p>
             <Button variant="primary">Read Article</Button>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Articles Grid */}
         <motion.div
@@ -144,7 +144,9 @@ const MagazinePage = () => {
           variants={containerVariants}
         >
           {filteredArticles.map((article) => (
-            <Card key={article.id} className="p-0">
+             <Link key={article.id} href={article.id === 1 ? '/new-page' : `/articles/${article.id}`} passHref>
+               <Card className="p-0">
+
               <div
                 className="aspect-video bg-gray-100 bg-cover bg-center"
                 style={{ backgroundImage: `url(${article.image})` }} // Use the article image
@@ -161,7 +163,9 @@ const MagazinePage = () => {
                 </div>
               </div>
             </Card>
+            </Link>
           ))}
+
         </motion.div>
 
         {/* Newsletter Section */}
