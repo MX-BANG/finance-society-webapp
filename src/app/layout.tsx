@@ -14,6 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.png" /> {/* Updated favicon reference */}
+      </head>
       <body>
         <Header />
         <main>{children}</main>
