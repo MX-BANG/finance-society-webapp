@@ -50,41 +50,53 @@ export default function Home() {
   ];
 
   return (
-    <div className="space-y-20 py-10">
-      {/* Hero Section */}
-      <motion.section 
-        className="relative h-[80vh] flex items-center justify-center text-center"
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-navy/90 to-primary-grey/90 -z-10" />
-        <div className="max-w-4xl mx-auto px-4">
-          <motion.h1 
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-            variants={itemVariants}
-          >
-            Welcome to Finance Society
-          </motion.h1>
-          <motion.p 
-            className="text-xl text-gray-200 mb-8"
-            variants={itemVariants}
-          >
-            Empowering future financial leaders through education, experience, and excellence
-          </motion.p>
-          <motion.div 
-            className="flex flex-wrap justify-center gap-4"
-            variants={itemVariants}
-          >
-            <Link href="/register" className="btn-primary">
-              Join Now
-            </Link>
-            <Link href="/events" className="btn-secondary">
-              Explore Events
-            </Link>
-          </motion.div>
-        </div>
-      </motion.section>
+    <div className="space-y-15 py-5"> {/* Reduced padding */}
+
+     {/* Hero Section */}
+<motion.section 
+  className="relative h-[90vh] flex items-center justify-center text-center pt-0"
+  initial="hidden"
+  animate="visible"
+  variants={containerVariants}
+>
+  {/* Background Image */}
+  <div 
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url('/stocksbg.jpg')" }}
+  />
+
+  {/* Overlay (optional, for better text visibility) */}
+  <div className="absolute inset-0 bg-black/50 z-10" /> {/* Add z-index to overlay */}
+
+  {/* Text Container */}
+  <div className="max-w-4xl mx-auto px-4 relative z-20"> {/* Add z-index to text container */}
+    <motion.h1 
+      className="text-4xl md:text-6xl font-bold text-white mb-6"
+      initial="hidden"
+      animate="visible"
+      variants={itemVariants}
+    >
+      Welcome to Finance Society
+    </motion.h1>
+    <motion.p 
+      className="text-xl text-gray-200 mb-8"
+      variants={itemVariants}
+    >
+      Empowering future financial leaders through education, experience, and excellence
+    </motion.p>
+    <motion.div 
+      className="flex flex-wrap justify-center gap-4"
+      variants={itemVariants}
+    >
+      <Link href="/register" className="btn-primary">
+        Join Now
+      </Link>
+      <Link href="/events" className="btn-secondary">
+        Explore Events
+      </Link>
+    </motion.div>
+  </div>
+</motion.section>
 
       {/* Features Section */}
       <motion.section 
