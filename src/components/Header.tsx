@@ -34,7 +34,8 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-primary-navy">
-            Finance Society
+            <img src="/path/to/your/logo.png" alt="Finance Society Logo" className="h-8" />
+
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
