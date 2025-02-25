@@ -2,10 +2,10 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 // List of paths that require authentication
-const protectedPaths = ['/trading'];
+const protectedPaths = ['/trading', '/trading/:path*'];
 
 // List of paths that should redirect to dashboard if already authenticated
-const authPaths = ['/login'];
+const authPaths = ['/login', '/register'];
 
 export function middleware(request: NextRequest) {
   const userStr = request.cookies.get('finance_society_current_user')?.value;
@@ -13,21 +13,33 @@ export function middleware(request: NextRequest) {
 
   const isAuthenticated = !!userStr;
 
+  // Normalize path for case-insensitive matching
+  const normalizedPath = path.toLowerCase();
+
   // If trying to access protected routes without authentication
-  if (protectedPaths.includes(path) && !isAuthenticated) {
+  if (
+    protectedPaths.some((protectedPath) =>
+      normalizedPath.startsWith(protectedPath.replace('/:path*', ''))
+    ) &&
+    !isAuthenticated
+  ) {
     const loginUrl = new URL('/login', request.url);
-    loginUrl.searchParams.set('redirect', path);
+    loginUrl.searchParams.set('redirect', path); // Preserve the original path for redirection after login
     return NextResponse.redirect(loginUrl);
   }
 
   // If trying to access auth pages while already authenticated
-  if (authPaths.includes(path) && isAuthenticated) {
+  if (
+    authPaths.some((authPath) => normalizedPath === authPath.toLowerCase()) &&
+    isAuthenticated
+  ) {
     return NextResponse.redirect(new URL('/trading', request.url));
   }
 
   return NextResponse.next();
 }
 
+// Static configuration for middleware
 export const config = {
-  matcher: [...protectedPaths, ...authPaths],
+  matcher: ['/trading', '/trading/:path*', '/login', '/register'],
 };
