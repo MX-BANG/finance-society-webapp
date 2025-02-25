@@ -1,6 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState } from 'react'; // Import useState
+import Link from 'next/link'; // Import Link
 import Card from '../../components/Card';
 import Button from '../../components/Button';
 
@@ -13,7 +15,7 @@ const articles = [
     date: 'February 28, 2024',
     readTime: '5 min read',
     excerpt: 'A comprehensive guide to understanding and navigating market volatility in today\'s dynamic financial landscape.',
-    image: '/articles/market-volatility.jpg'
+    image: '/articles/market-volatility.jpg',
   },
   {
     id: 2,
@@ -23,7 +25,7 @@ const articles = [
     date: 'February 25, 2024',
     readTime: '7 min read',
     excerpt: 'Exploring the growing trend of ESG investing and its impact on portfolio management strategies.',
-    image: '/articles/sustainable-investing.jpg'
+    image: '/articles/sustainable-investing.jpg',
   },
   {
     id: 3,
@@ -33,8 +35,8 @@ const articles = [
     date: 'February 22, 2024',
     readTime: '10 min read',
     excerpt: 'Deep dive into the technical aspects of cryptocurrency trading and blockchain technology.',
-    image: '/articles/crypto-analysis.jpg'
-  }
+    image: '/articles/crypto-analysis.jpg',
+  },
 ];
 
 const categories = [
@@ -43,27 +45,34 @@ const categories = [
   'Trading Strategies',
   'ESG',
   'Crypto',
-  'Personal Finance'
+  'Personal Finance',
 ];
 
 const MagazinePage = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All Articles'); // State to track selected category
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
-      opacity: 1
-    }
+      opacity: 1,
+    },
   };
+
+  // Filter articles based on selected category
+  const filteredArticles = selectedCategory === 'All Articles'
+    ? articles
+    : articles.filter(article => article.category === selectedCategory);
 
   return (
     <div className="section-padding py-16">
@@ -75,13 +84,13 @@ const MagazinePage = () => {
       >
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-5xl font-bold mb-4"
             variants={itemVariants}
           >
             Finance Society Magazine
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-lg text-gray-600"
             variants={itemVariants}
           >
@@ -90,7 +99,7 @@ const MagazinePage = () => {
         </div>
 
         {/* Categories */}
-        <motion.div 
+        <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
           variants={containerVariants}
         >
@@ -98,12 +107,15 @@ const MagazinePage = () => {
             <motion.button
               key={category}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all
-                ${category === 'All Articles' 
-                  ? 'bg-primary-navy text-white' 
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                ${
+                  selectedCategory === category
+                    ? 'bg-primary-navy text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => setSelectedCategory(category)} // Update selected category on click
             >
               {category}
             </motion.button>
@@ -111,7 +123,7 @@ const MagazinePage = () => {
         </motion.div>
 
         {/* Featured Article */}
-        <motion.div 
+        <motion.div
           className="relative h-[400px] rounded-2xl overflow-hidden mb-16"
           variants={itemVariants}
         >
@@ -127,13 +139,16 @@ const MagazinePage = () => {
         </motion.div>
 
         {/* Articles Grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
         >
-          {articles.map((article) => (
+          {filteredArticles.map((article) => (
             <Card key={article.id} className="p-0">
-              <div className="aspect-video bg-gray-100" />
+              <div
+                className="aspect-video bg-gray-100 bg-cover bg-center"
+                style={{ backgroundImage: `url(${article.image})` }} // Use the article image
+              />
               <div className="p-6">
                 <span className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 mb-4">
                   {article.category}
@@ -150,7 +165,7 @@ const MagazinePage = () => {
         </motion.div>
 
         {/* Newsletter Section */}
-        <motion.div 
+        <motion.div
           className="bg-primary-navy text-white rounded-2xl p-8 md:p-12 mt-16"
           variants={itemVariants}
         >
