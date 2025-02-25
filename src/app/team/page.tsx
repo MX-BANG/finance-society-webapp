@@ -1,32 +1,46 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const teamMembers = [
   {
-    name: 'John Doe',
+    name: 'Manesh Kumar',
     role: 'President',
-    bio: 'Finance professional with 5+ years of experience in investment banking.',
-    image: '/team/john-doe.jpg',
-    linkedin: 'https://linkedin.com/in/johndoe'
+    bio: 'Investment Analyst at Lumida Wealth.',
+    image: '/Manesh.png',
+    linkedin: 'https://www.linkedin.com/in/maneshkh/',
+    category: 'Top Bodies'
   },
   {
-    name: 'Jane Smith',
+    name: 'Ayesha Issa',
     role: 'Vice President',
     bio: 'Specializes in market analysis and trading strategies.',
-    image: '/team/jane-smith.jpg',
-    linkedin: 'https://linkedin.com/in/janesmith'
+    image: '/Ayesha-Issa.jpg',
+    linkedin: 'https://linkedin.com/in/janesmith',
+    category: 'Top Bodies'
   },
   {
-    name: 'Mike Johnson',
-    role: 'Events Coordinator',
-    bio: 'Experienced in organizing financial workshops and conferences.',
-    image: '/team/mike-johnson.jpg',
-    linkedin: 'https://linkedin.com/in/mikejohnson'
+    name: 'Manoj Kumar',
+    role: 'Vice President',
+    bio: 'Specializes in market analysis and trading strategies.',
+    image: '/Manoj-Kumar.jpg',
+    linkedin: 'https://linkedin.com/in/janesmith',
+    category: 'Top Bodies'
+  },
+  {
+    name: 'Moiz Ali Siddiqui',
+    role: 'Developer',
+    bio: 'Full Stack Developer with AI integration expertise.',
+    image: '/moiz-picture.jpg',
+    linkedin: 'https://www.linkedin.com/in/moizalisiddiqui/',
+    category: 'Top Bodies'
   }
 ];
 
 const TeamPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -45,8 +59,15 @@ const TeamPage = () => {
     }
   };
 
+  const categories = ['All', 'Top Bodies', 'HR', 'Marketing', 'Events', 'Corporate', 'Logistics', 'Publications'];
+
+  const filteredMembers = selectedCategory === 'All' 
+    ? teamMembers 
+    : teamMembers.filter(member => member.category === selectedCategory);
+  
   return (
     <div className="section-padding py-16">
+
       <motion.div
         initial="hidden"
         animate="visible"
@@ -67,12 +88,35 @@ const TeamPage = () => {
             We are a group of passionate individuals dedicated to empowering future financial leaders through education and practical experience.
           </motion.p>
         </div>
+ {/* Categories */}
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 mb-12"
+          variants={containerVariants}
+        >
+          {categories.map((category) => (
+            <motion.button
+              key={category}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all
+                ${
+                  selectedCategory === category
+                    ? 'bg-primary-navy text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setSelectedCategory(category)} // Update selected category on click
+            >
+              {category}
+            </motion.button>
+          ))}
+        </motion.div>
 
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
         >
-          {teamMembers.map((member, index) => (
+          {filteredMembers.map((member, index) => (
             <motion.div
               key={member.name}
               className="glass-card p-6 rounded-xl"
@@ -83,9 +127,9 @@ const TeamPage = () => {
               }}
             >
               <div className="aspect-square rounded-full bg-gray-200 mb-4 overflow-hidden">
-                {/* Placeholder for member image */}
-                <div className="w-full h-full bg-primary-navy/10"></div>
+                <img src={member.image} alt={member.name} className="w-full h-full object-cover" /> {/* Render the member image */}
               </div>
+
               <h2 className="text-xl font-semibold mb-2">{member.name}</h2>
               <p className="text-primary-navy font-medium mb-3">{member.role}</p>
               <p className="text-gray-600 mb-4">{member.bio}</p>
@@ -123,9 +167,11 @@ const TeamPage = () => {
             We're always looking for passionate individuals to join our team. 
             If you're interested in contributing to the Finance Society, we'd love to hear from you.
           </p>
-          <button className="btn-primary">
-            Apply Now
-          </button>
+          <a href="https://docs.google.com/forms/d/e/your-form-id/viewform" target="_blank" rel="noopener noreferrer">
+            <button className="btn-primary">
+              Apply Now
+            </button>
+          </a>
         </motion.div>
       </motion.div>
     </div>
