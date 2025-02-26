@@ -125,7 +125,8 @@ export default function Home() {
             >
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600 mb-4">{feature.description}</p>
+              <p className="text-grey mb-4">{feature.description}</p>
+
               <Link 
                 href={feature.link}
                 className="text-primary-navy hover:text-accent-blue transition-colors"
@@ -137,45 +138,43 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* CTA Section */}
+   {/* CTA Section */}
 <motion.section 
   className="py-16"
-  style={{ backgroundImage: "url('/moiz-picture.jpg')" }}
-
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <motion.h2 
-            className="text-3xl md:text-4xl font-bold mb-6"
-            initial="hidden"
-            animate="visible"
-            variants={itemVariants}
-          >
-            Ready to Start Your Financial Journey?
-
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-gray-300 mb-8"
-            variants={itemVariants}
-          >
-            Join our community of aspiring financial professionals and gain access to exclusive resources and opportunities.
-          </motion.p>
-          <motion.div 
-            className="flex flex-wrap justify-center gap-4"
-            variants={itemVariants}
-          >
-            <Link href="/register" className="btn-primary bg-white text-primary-navy hover:bg-gray-100">
-              Get Started
-            </Link>
-            <Link href="/team" className="btn-secondary border border-white">
-              Meet the Team
-            </Link>
-          </motion.div>
-        </div>
-      </motion.section>
+  style={{ backgroundImage: "url('/candlestick-patterns.webp')" }}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={containerVariants}
+>
+  <div className="max-w-4xl mx-auto text-center px-4">
+    <motion.h2 
+      className="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-lg"  // Added drop-shadow class here
+      initial="hidden"
+      animate="visible"
+      variants={itemVariants}
+    >
+      Ready to Start Your Financial Journey?
+    </motion.h2>
+    <motion.p 
+      className="text-xl text-gray-300 mb-8 drop-shadow-lg stroke-text" // Added stroke-text class here
+      variants={itemVariants}
+    >
+      Join our community of aspiring financial professionals and gain access to exclusive resources and opportunities.
+    </motion.p>
+    <motion.div 
+      className="flex flex-wrap justify-center gap-4"
+      variants={itemVariants}
+    >
+      <Link href="/register" className="btn-primary bg-white text-primary-navy hover:bg-gray-100">
+        Get Started
+      </Link>
+      <Link href="/team" className="btn-secondary border border-white">
+        Meet the Team
+      </Link>
+    </motion.div>
+  </div>
+</motion.section>
 
       {/* Latest Events Preview */}
       <motion.section 

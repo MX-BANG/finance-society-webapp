@@ -113,3 +113,13 @@ html {
   width: 300px; 
   padding: 0px;   /* Maintain aspect ratio */
 }
+
+.drop-shadow-lg {
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* Customize the offsets and blur as needed */
+}
+
+.stroke-text {
+  -webkit-text-stroke: 0.2px rgb(255, 255, 255); /* Edge and Safari */
+  text-stroke: 0.2px rgb(255, 248, 248); /* For other browsers */
+  color: rgb(0, 166, 255); /* Example color */
+}
