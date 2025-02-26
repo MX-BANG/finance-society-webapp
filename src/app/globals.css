@@ -107,3 +107,9 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-navy);
 }
+
+.custom-logo {
+  height: 40px;   /* Adjust the value as needed */
+  width: 300px; 
+  padding: 0px;   /* Maintain aspect ratio */
+}
