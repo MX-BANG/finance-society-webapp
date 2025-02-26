@@ -138,8 +138,10 @@ export default function Home() {
       </motion.section>
 
       {/* CTA Section */}
-      <motion.section 
-        className="py-16 bg-primary-navy text-white"
+<motion.section 
+  className="py-16"
+  style={{ backgroundImage: "url('/moiz-picture.jpg')" }}
+
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -148,9 +150,12 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center px-4">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold mb-6"
+            initial="hidden"
+            animate="visible"
             variants={itemVariants}
           >
             Ready to Start Your Financial Journey?
+
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-300 mb-8"
