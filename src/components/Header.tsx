@@ -45,7 +45,7 @@ const Header = () => {
             <Link href="/events" className="text-gray-600 hover:text-primary-navy">Events</Link>
             <Link href="/team" className="text-gray-600 hover:text-primary-navy">Team</Link>
 
-            {currentUser ? (
+            {/* {currentUser ? (
               <div className="flex items-center space-x-4">
                 <span className="text-gray-600">{currentUser.email}</span>
                 <Button variant="secondary" onClick={handleLogout}>Logout</Button>
@@ -54,7 +54,7 @@ const Header = () => {
               <Link href="/login">
                 <Button variant="primary">Login</Button>
               </Link>
-            )}
+            )} */}
           </div>
 
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -80,7 +80,7 @@ const Header = () => {
             <Link href="/events" className="block text-gray-600 hover:text-primary-navy">Events</Link>
             <Link href="/team" className="block text-gray-600 hover:text-primary-navy">Team</Link>
 
-            {currentUser ? (
+            {/* {currentUser ? (
               <div className="space-y-4">
                 <span className="block text-gray-600">{currentUser.email}</span>
                 <Button variant="secondary" onClick={handleLogout} className="w-full">Logout</Button>
@@ -89,7 +89,7 @@ const Header = () => {
               <Link href="/login">
                 <Button variant="primary" className="w-full">Login</Button>
               </Link>
-            )}
+            )} */}
           </div>
         </motion.div>
       </nav>
