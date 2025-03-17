@@ -165,10 +165,9 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* CTA Section */}
+      {/* Our Sponsors Section */}
       <motion.section 
         className="py-16"
-        style={{ backgroundImage: "url('/candlestick-patterns.webp')" }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -176,32 +175,23 @@ export default function Home() {
       >
         <div className="max-w-4xl mx-auto text-center px-4">
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-lg"
+            className="text-3xl md:text-4xl font-bold text-primary-navy mb-6"
             initial="hidden"
             animate="visible"
             variants={itemVariants}
           >
-            Ready to Start Your Financial Journey?
+            Our Sponsors
           </motion.h2>
-          <motion.p 
-            className="text-xl text-gray-300 mb-8 drop-shadow-lg stroke-text"
-            variants={itemVariants}
-          >
-            Join our community of aspiring financial professionals and gain access to exclusive resources and opportunities.
-          </motion.p>
-          <motion.div 
-            className="flex flex-wrap justify-center gap-4"
-            variants={itemVariants}
-          >
-            <Link href="/register" className="btn-primary bg-white text-primary-navy hover:bg-gray-100">
-              Get Started
-            </Link>
-            <Link href="/team" className="btn-secondary border border-white">
-              Meet the Team
-            </Link>
-          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <img src="/HBL-logo.png" alt="Sponsor 1" className="object-contain h-24" />
+            <img src="/placeholder2.png" alt="Sponsor 2" className="object-contain h-24" />
+            <img src="/placeholder3.png" alt="Sponsor 3" className="object-contain h-24" />
+            <img src="/placeholder4.png" alt="Sponsor 4" className="object-contain h-24" />
+            <img src="/placeholder5.png" alt="Sponsor 5" className="object-contain h-24" />
+          </div>
         </div>
       </motion.section>
+
 
       {/* Latest Events Preview */}
       <motion.section 
