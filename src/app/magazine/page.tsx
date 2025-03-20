@@ -25,7 +25,7 @@ const articles = [
     date: 'February 25, 2024',
     readTime: '7 min read',
     excerpt: 'Exploring the growing trend of ESG investing and its impact on portfolio management strategies.',
-    image: '/articles/sustainable-investing.jpg',
+    image: '/mag1.jpeg',
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const articles = [
     date: 'February 22, 2024',
     readTime: '10 min read',
     excerpt: 'Deep dive into the technical aspects of cryptocurrency trading and blockchain technology.',
-    image: '/articles/crypto-analysis.jpg',
+    image: '/crypto.jpeg',
   },
 ];
 
