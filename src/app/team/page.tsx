@@ -59,7 +59,7 @@ const TeamPage = () => {
     }
   };
 
-  const categories = ['All', 'Top Bodies', 'HR', 'Marketing', 'Events', 'Corporate', 'Logistics', 'Publications'];
+  const categories = ['Top Bodies', 'HR', 'Marketing', 'Events', 'Corporate', 'Logistics', 'Publications'];
 
   const filteredMembers = selectedCategory === 'All' 
     ? teamMembers 
