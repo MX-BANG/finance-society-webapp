@@ -16,6 +16,7 @@ const articles = [
     readTime: '5 min read',
     excerpt: 'A comprehensive guide to understanding and navigating market volatility in today\'s dynamic financial landscape.',
     image: '/Magzinetest.jpg',
+    link: 'https://open.substack.com/pub/stockinsider/p/warren-buffett-sells-the-s-and-p500?utm_campaign=post&utm_medium=web', // Individual link for article 1
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ const articles = [
     readTime: '7 min read',
     excerpt: 'Exploring the growing trend of ESG investing and its impact on portfolio management strategies.',
     image: '/mag1.jpeg',
+    link: 'https://example.com/articles/2', // Individual link for article 2
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ const articles = [
     readTime: '10 min read',
     excerpt: 'Deep dive into the technical aspects of cryptocurrency trading and blockchain technology.',
     image: '/crypto.jpeg',
+    link: 'https://example.com/articles/3', // Individual link for article 3
   },
 ];
 
@@ -122,50 +125,32 @@ const MagazinePage = () => {
           ))}
         </motion.div>
 
-        {/* Featured Article
-        <motion.div
-          className="relative h-[400px] rounded-2xl overflow-hidden mb-16"
-          variants={itemVariants}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70" />
-          <div className="absolute inset-0 flex flex-col justify-end p-8 text-white">
-            <span className="text-sm font-medium mb-2">Featured Article</span>
-            <h2 className="text-3xl font-bold mb-4">The Future of Financial Technology</h2>
-            <p className="text-gray-200 mb-6 max-w-2xl">
-              Discover how emerging technologies are reshaping the financial industry and what it means for investors.
-            </p>
-            <Button variant="primary">Read Article</Button>
-          </div>
-        </motion.div> */}
-
         {/* Articles Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
         >
           {filteredArticles.map((article) => (
-             <Link key={article.id} href={article.id === 1 ? '/new-page' : `/articles/${article.id}`} passHref>
-               <Card className="p-0">
-
-              <div
-                className="aspect-video bg-gray-100 bg-cover bg-center"
-                style={{ backgroundImage: `url(${article.image})` }} // Use the article image
-              />
-              <div className="p-6">
-                <span className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 mb-4">
-                  {article.category}
-                </span>
-                <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
-                <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                <div className="flex items-center justify-between text-sm text-gray-500">
-                  <span>{article.date}</span>
-                  <span>{article.readTime}</span>
+            <Link key={article.id} href={article.link} passHref>
+              <Card className="p-0">
+                <div
+                  className="aspect-video bg-gray-100 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${article.image})` }} // Use the article image
+                />
+                <div className="p-6">
+                  <span className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 mb-4">
+                    {article.category}
+                  </span>
+                  <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
+                  <p className="text-gray-600 mb-4">{article.excerpt}</p>
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <span>{article.date}</span>
+                    <span>{article.readTime}</span>
+                  </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
             </Link>
           ))}
-
         </motion.div>
 
         {/* Newsletter Section */}
