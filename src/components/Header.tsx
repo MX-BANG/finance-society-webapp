@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { authApi } from '../services/authApi';
+import { authApi } from '../services/authApi'; // Corrected import path
 import Button from './Button';
 
 const Header = () => {
@@ -40,7 +40,8 @@ const Header = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/" className="text-gray-600 hover:text-primary-navy">Home</Link>
-            <Link href="/trading" className="text-gray-600 hover:text-primary-navy">Trading</Link>
+            <Link href="/portfolio" className="text-gray-600 hover:text-primary-navy">Portfolio</Link>
+
             <Link href="/magazine" className="text-gray-600 hover:text-primary-navy">Magazine</Link>
             <Link href="/events" className="text-gray-600 hover:text-primary-navy">Events</Link>
             <Link href="/team" className="text-gray-600 hover:text-primary-navy">Team</Link>
@@ -75,7 +76,8 @@ const Header = () => {
         >
           <div className="py-4 space-y-4">
             <Link href="/" className="block text-gray-600 hover:text-primary-navy">Home</Link>
-            <Link href="/trading" className="block text-gray-600 hover:text-primary-navy">Trading</Link>
+            <Link href="/portfolio" className="block text-gray-600 hover:text-primary-navy">Portfolio</Link>
+
             <Link href="/magazine" className="block text-gray-600 hover:text-primary-navy">Magazine</Link>
             <Link href="/events" className="block text-gray-600 hover:text-primary-navy">Events</Link>
             <Link href="/team" className="block text-gray-600 hover:text-primary-navy">Team</Link>
