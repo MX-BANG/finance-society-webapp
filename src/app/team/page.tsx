@@ -17,7 +17,7 @@ const teamMembers = [
     role: 'Vice President',
     bio: 'Specializes in market analysis and trading strategies.',
     image: '/Ayesha-Issa.jpg',
-    linkedin: 'https://linkedin.com/in/janesmith',
+    linkedin: 'https://www.linkedin.com/in/ayesha-issa-3b999b279/',
     category: 'Top Bodies'
   },
   {
@@ -25,7 +25,7 @@ const teamMembers = [
     role: 'Vice President',
     bio: 'Specializes in market analysis and trading strategies.',
     image: '/Manoj-Kumar.jpg',
-    linkedin: 'https://linkedin.com/in/janesmith',
+    linkedin: 'https://www.linkedin.com/in/manoj-lohana/',
     category: 'Top Bodies'
   },
   {
@@ -39,7 +39,7 @@ const teamMembers = [
 ];
 
 const TeamPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('Top Bodies');
 
   const containerVariants = {
     hidden: { opacity: 0 },
