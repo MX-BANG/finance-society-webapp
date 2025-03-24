@@ -5,6 +5,7 @@ import { useState } from 'react'; // Import useState
 import Link from 'next/link'; // Import Link
 import Card from '../../components/Card';
 import Button from '../../components/Button';
+import { a } from 'framer-motion/client';
 
 const articles = [
   {
@@ -16,7 +17,7 @@ const articles = [
     readTime: '5 min read',
     excerpt: 'A comprehensive guide to understanding and navigating market volatility in today\'s dynamic financial landscape.',
     image: '/Magzinetest.jpg',
-    link: 'https://open.substack.com/pub/stockinsider/p/warren-buffett-sells-the-s-and-p500?utm_campaign=post&utm_medium=web', // Individual link for article 1
+    link: 'https://open.substack.com/pub/stockinsider/p/warren-buffett-sells-the-s-and-p500?utm_campaign=post&utm_medium=web', 
   },
   {
     id: 2,
