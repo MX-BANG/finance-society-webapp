@@ -193,7 +193,7 @@ const EventsPage = () => {
           ))}
         </motion.div>
 
-        {/* Past Events Section */}
+        {/* Past Events Section
         <motion.div 
           className="text-center mt-12"
           variants={itemVariants}
@@ -279,7 +279,7 @@ const EventsPage = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         <motion.div 
           className="text-center mt-12"
