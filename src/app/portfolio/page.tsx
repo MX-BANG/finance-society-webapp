@@ -6,25 +6,62 @@ import Link from 'next/link';
 
 const events = [
   {
-    title: 'Annual Trading Competition 2024',
-    image: '/event1.jpg',
-    description: 'The most competitive event of the year where students showcased their trading skills, competing for top prizes and recognition.',
+    title: 'International Conference on Islamic Banking & Finance (ICIBF)',
+    images: ['/icibf1.png', '/ftimg-4.jpeg', '/icibf2.jpeg'],
+    description: 'The International Conference on Islamic Banking & Finance (ICIBF) is the Finance Society’s flagship event, held annually for 8 consecutive years. It has grown into a premier platform for discussing the latest trends, challenges, and innovations in Islamic finance.',
+    themes: [
+      'Sustainability and Ethical Finance: Explored the role of Islamic finance in promoting sustainable development and ethical investment practices.',
+      'Digital Transformation: Focused on integrating FinTech, blockchain, and digital wallets in Islamic banking.',
+      'Financial Inclusion: Highlighted the importance of microfinance and SMEs in driving economic growth in underdeveloped regions.'
+    ],
+    impact: [
+      'The ICIBF has played a pivotal role in shaping the future of Islamic finance, fostering collaboration between academia and industry.',
+      'It has empowered students with the knowledge and skills to address global financial challenges through an Islamic finance lens.',
+    ]
   },
   {
-    title: 'Investment Workshop Series',
-    image: '/event2.jpg',
-    description: 'A series of expert-led sessions on financial markets, investment strategies, and portfolio management.',
+    title: 'General Body Meetings (GBM)',
+    images: ['/gbm2.jpeg', '/gbm3.png', '/gbm1.jpeg'],
+    description: 'General Body Meetings (GBMs) form the foundation of the Finance Society’s strategic planning and operational framework. These meetings bring together members to set goals, share ideas, and foster a sense of community.',
+    themes: [
+      'Strategic Planning: Outlined the society’s vision, mission, and key initiatives for the academic year.',
+      'Team Building: Encouraged collaboration and leadership among members through interactive sessions and workshops.',
+      'Event Roadmap: Discussed upcoming events, including workshops, competitions, and industry collaborations.'
+    ],
+    impact: [
+      'The GBM has been instrumental in ensuring the society’s success, providing a clear direction for its activities.',
+      'It has fostered a culture of teamwork and accountability, empowering members to take ownership of their roles.'
+    ]
   },
   {
-    title: 'Finance Society Networking Gala',
-    image: '/event3.jpg',
-    description: 'An exclusive networking event bringing together finance professionals, alumni, and students for insightful discussions and career opportunities.',
+    title: 'Open House',
+    images: ['/openhouse2.jpg', '/ftimg-2.jpeg', '/openhouse3.jpg'],
+    description: 'The Open House events have been a cornerstone of the Finance Society’s outreach efforts, introducing students to the world of finance and the opportunities offered by the society',
+    themes: [
+      'Interactive Sessions: Engaged students through Q&A sessions, discussions, and networking opportunities..',
+      'Onboarding: Provided students with information about the society’s mission, events, and membership benefits.',
+      'Inclusivity: Welcomed students from diverse academic backgrounds, fostering a culture of inclusion and collaboration.'
+    ],
+    impact: [
+      'The Open House has consistently attracted new members, expanding the society’s reach and impact.',
+      'It has inspired students to explore finance-related topics and take their first steps toward financial literacy.'
+    ]
   },
   {
-    title: 'Stock Market Simulation 2023',
-    image: '/event4.jpg',
-    description: 'An interactive, real-time stock market simulation where students managed portfolios and made strategic investment decisions.',
-  },
+    title: 'Industry Expert & Guest Speaker Sessions',
+    images: ['/js-1.jpeg', '/ftimg-1.jpeg', '/stock-3.jpg'],
+    description: 'The Finance Society has hosted numerous industry expert and guest speaker sessions, providing students with unparalleled insights into the financial world',
+    themes: [
+      'Sharing insights into market dynamics, investment strategies, and the future of the Pakistan Stock Exchange (PSX).',
+      'Introduced students to mutual funds and launched the JS Campus Ambassador Program, offering hands-on experience in the financial industry.',
+      'Focused on becoming a SMART and informed investor, with practical advice on equities, bonds, and risk management.'
+
+    ],
+    impact: [
+      'Bridged the gap between academia and industry.',
+      'Equipped students with the tools to excel in the financial sector'
+    ]
+  }
 ];
 
 export default function PortfolioPage() {
@@ -32,15 +69,12 @@ export default function PortfolioPage() {
     <div className="space-y-15 py-5">
       {/* Hero Section */}
       <motion.section className="relative h-[90vh] flex items-center justify-center text-center pt-0">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/portfolio-bg.jpg')" }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/pe.png')" }} />
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="max-w-4xl mx-auto px-4 relative z-20">
           <motion.h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Our Event Highlights
+            Past Events by Finance Society
           </motion.h1>
-          <motion.p className="text-xl text-gray-200 mb-8">
-            Relive the best moments from our past events.
-          </motion.p>
         </div>
       </motion.section>
 
@@ -49,24 +83,38 @@ export default function PortfolioPage() {
         {events.map((event, index) => (
           <motion.div 
             key={index} 
-            className={`max-w-6xl mx-auto flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12`}
+            className="max-w-6xl mx-auto space-y-6"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Image src={event.image} alt={event.title} width={700} height={500} className="rounded-lg shadow-lg" />
-            <div>
+            {/* Large Images on Top */}
+            <div className="grid grid-cols-1 gap-4 w-full">
+              <div className="grid grid-cols-3 gap-4">
+                {event.images.map((img, i) => (
+                  <Image key={i} src={img} alt={event.title} width={800} height={600} className="rounded-lg shadow-lg w-full h-auto" />
+                ))}
+              </div>
+            </div>
+            {/* Details Below */}
+            <div className="text-center">
               <h2 className="text-4xl font-bold mb-6">{event.title}</h2>
-              <p className="text-xl text-gray-700">{event.description}</p>
+              <p className="text-xl text-gray-700 mb-4">{event.description}</p>
+              <h3 className="text-2xl font-semibold mb-2">Key Themes:</h3>
+              <ul className="list-disc list-inside text-lg text-gray-600 mb-4">
+                {event.themes.map((theme, i) => (
+                  <li key={i}>{theme}</li>
+                ))}
+              </ul>
+              <h3 className="text-2xl font-semibold mb-2">Impact:</h3>
+              <ul className="list-disc list-inside text-lg text-gray-600">
+                {event.impact.map((impact, i) => (
+                  <li key={i}>{impact}</li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         ))}
-      </motion.section>
-
-      {/* Call-to-Action Footer */}
-      <motion.section className="py-16 text-center">
-        <h2 className="text-3xl font-bold mb-4">Want to be part of our next event?</h2>
-        <Link href="/join" className="btn-primary">Join the Finance Society</Link>
       </motion.section>
     </div>
   );
