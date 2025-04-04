@@ -58,10 +58,10 @@ export default function Home() {
 
   const features = [
     {
-      title: 'Trading Platform',
-      description: 'Access real-time market data and practice trading in a risk-free environment.',
+      title: 'Our Portfolio',
+      description: 'Experience our past events and our challenging struggles.',
       icon: '📈',
-      link: '/trading'
+      link: '/portfolio'
     },
     {
       title: 'Events & Competitions',
@@ -165,6 +165,64 @@ export default function Home() {
         </div>
       </motion.section>
 
+      {/* Featured Events Section */}
+      <motion.section 
+        className="py-16 space-y-24"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+      >
+        <motion.div 
+          className="max-w-6xl mx-auto px-4"
+          variants={itemVariants}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Featured Events</h2>
+          
+          <div className="space-y-24">
+          <motion.div 
+              className="flex flex-col md:flex-row-reverse items-center gap-16"
+              variants={itemVariants}
+            >
+              <div className="w-full md:w-1/2">
+                <img 
+                  src="/ftimg-4.jpeg" 
+                  alt="ICIBF" 
+                  className="rounded-lg shadow-lg w-full h-auto"
+                />
+              </div>
+              <div className="w-full md:w-1/2">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6">International Conference on Islamic Banking & Finance (ICIBF)</h3>
+                <p className="text-gray-600">
+                The International Conference on Islamic Banking & Finance (ICIBF) is the Finance Society’s flagship
+                event, held annually for 8 consecutive years. It has grown into a premier platform for discussing the
+                latest trends, challenges, and innovations in Islamic finance.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              className="flex flex-col md:flex-row items-center gap-16"
+              variants={itemVariants}
+            >
+              <div className="w-full md:w-1/2">
+                <img 
+                  src="/ftimg-1.jpeg" 
+                  alt="JS Session" 
+                  className="rounded-lg shadow-lg w-full h-auto"
+                />
+              </div>
+              <div className="w-full md:w-1/2">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6">JS Session</h3>
+                <p className="text-gray-600">
+                  Introduced students to mutual funds and launched the JS Campus Ambassador Program, offering hands-on experience in the financial industry.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </motion.section>
+
       {/* Our Sponsors Section */}
       <motion.section 
         className="py-16"
@@ -182,16 +240,26 @@ export default function Home() {
           >
             Our Sponsors
           </motion.h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            <img src="/HBL-logo.png" alt="Sponsor 1" className="object-contain h-24" />
-            <img src="/placeholder2.png" alt="Sponsor 2" className="object-contain h-24" />
-            <img src="/placeholder3.png" alt="Sponsor 3" className="object-contain h-24" />
-            <img src="/placeholder4.png" alt="Sponsor 4" className="object-contain h-24" />
-            <img src="/placeholder5.png" alt="Sponsor 5" className="object-contain h-24" />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          <img src="/HBL-logo.png" alt="Sponsor 1" className="object-contain h-24" />
+          <img src="/placeholder2.png" alt="Sponsor 2" className="object-contain h-24" />
+          <img src="/placeholder3.png" alt="Sponsor 3" className="object-contain h-24" />
+          <img src="/placeholder4.png" alt="Sponsor 4" className="object-contain h-24" />
+          <img src="/placeholder5.png" alt="Sponsor 5" className="object-contain h-24" />
+          <img src="/placeholder6.png" alt="Sponsor 6" className="object-contain h-24" />
+          <img src="/placeholder7.png" alt="Sponsor 7" className="object-contain h-24" />
+          <img src="/placeholder8.png" alt="Sponsor 8" className="object-contain h-24" />
+          <img src="/placeholder9.png" alt="Sponsor 9" className="object-contain h-24" />
+          <img src="/placeholder10.png" alt="Sponsor 10" className="object-contain h-24" />
+          <img src="/placeholder11.png" alt="Sponsor 11" className="object-contain h-24" />
+          <img src="/placeholder12.png" alt="Sponsor 12" className="object-contain h-24" />
+          <img src="/placeholder13.png" alt="Sponsor 13" className="object-contain h-24" />
+          <img src="/placeholder14.png" alt="Sponsor 14" className="object-contain h-24" />
+          <img src="/placeholder15.png" alt="Sponsor 15" className="object-contain h-24" />
+          <img src="/placeholder16.png" alt="Sponsor 16" className="object-contain h-24" />
           </div>
         </div>
       </motion.section>
-
 
       {/* Latest Events Preview */}
       <motion.section 
