@@ -59,7 +59,7 @@ export default function Home() {
   const features = [
     {
       title: 'Our Portfolio',
-      description: 'Experience our past events and our challenging struggles.',
+      description: 'Experience our past events and discover the moments that made them unforgettable.',
       icon: '📈',
       link: '/portfolio'
     },
