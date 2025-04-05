@@ -94,7 +94,7 @@ export default function Home() {
       >
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/stocksbg.jpg')" }}
+          style={{ backgroundImage: "url('/stocksbg.webp')" }}
         />
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="max-w-4xl mx-auto px-4 relative z-20">
@@ -186,7 +186,7 @@ export default function Home() {
             >
               <div className="w-full md:w-1/2">
                 <img 
-                  src="/ftimg-4.jpeg" 
+                  src="/ftimg-4.webp" 
                   alt="ICIBF" 
                   className="rounded-lg shadow-lg w-full h-auto"
                 />
@@ -207,7 +207,7 @@ export default function Home() {
             >
               <div className="w-full md:w-1/2">
                 <img 
-                  src="/ftimg-1.jpeg" 
+                  src="/ftimg-1.webp" 
                   alt="JS Session" 
                   className="rounded-lg shadow-lg w-full h-auto"
                 />
@@ -241,7 +241,7 @@ export default function Home() {
             Our Sponsors
           </motion.h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          <img src="/HBL-logo.png" alt="Sponsor 1" className="object-contain h-24" />
+          <img src="/HBL-logo.webp" alt="Sponsor 1" className="object-contain h-24" />
           <img src="/placeholder2.png" alt="Sponsor 2" className="object-contain h-24" />
           <img src="/placeholder3.png" alt="Sponsor 3" className="object-contain h-24" />
           <img src="/placeholder4.png" alt="Sponsor 4" className="object-contain h-24" />
