@@ -186,7 +186,7 @@ export default function Home() {
             >
               <div className="w-full md:w-1/2">
                 <img 
-                  src="/ftimg-4.webp" 
+                  src="/Portfolio/ftimg-4.webp" 
                   alt="ICIBF" 
                   className="rounded-lg shadow-lg w-full h-auto"
                 />
@@ -207,7 +207,7 @@ export default function Home() {
             >
               <div className="w-full md:w-1/2">
                 <img 
-                  src="/ftimg-1.webp" 
+                  src="/Portfolio/ftimg-1.webp" 
                   alt="JS Session" 
                   className="rounded-lg shadow-lg w-full h-auto"
                 />
@@ -241,22 +241,21 @@ export default function Home() {
             Our Sponsors
           </motion.h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          <img src="/HBL-logo.webp" alt="Sponsor 1" className="object-contain h-24" />
-          <img src="/placeholder2.png" alt="Sponsor 2" className="object-contain h-24" />
-          <img src="/placeholder3.png" alt="Sponsor 3" className="object-contain h-24" />
-          <img src="/placeholder4.png" alt="Sponsor 4" className="object-contain h-24" />
-          <img src="/placeholder5.png" alt="Sponsor 5" className="object-contain h-24" />
-          <img src="/placeholder6.png" alt="Sponsor 6" className="object-contain h-24" />
-          <img src="/placeholder7.png" alt="Sponsor 7" className="object-contain h-24" />
-          <img src="/placeholder8.png" alt="Sponsor 8" className="object-contain h-24" />
-          <img src="/placeholder9.png" alt="Sponsor 9" className="object-contain h-24" />
-          <img src="/placeholder10.png" alt="Sponsor 10" className="object-contain h-24" />
-          <img src="/placeholder11.png" alt="Sponsor 11" className="object-contain h-24" />
-          <img src="/placeholder12.png" alt="Sponsor 12" className="object-contain h-24" />
-          <img src="/placeholder13.png" alt="Sponsor 13" className="object-contain h-24" />
-          <img src="/placeholder14.png" alt="Sponsor 14" className="object-contain h-24" />
-          <img src="/placeholder15.png" alt="Sponsor 15" className="object-contain h-24" />
-          <img src="/placeholder16.png" alt="Sponsor 16" className="object-contain h-24" />
+          <img src="/Sponsors/Meezan.webp" alt="Sponsor 1" className="object-contain h-24" />
+          <img src="/Sponsors/dubaiIslamic.webp" alt="Sponsor 2" className="object-contain h-24" />
+          <img src="/Sponsors/soneri.webp" alt="Sponsor 3" className="object-contain h-24" />
+          <img src="/Sponsors/bankislami.webp" alt="Sponsor 4" className="object-contain h-24" />
+          <img src="/Sponsors/AlBaraka.webp" alt="Sponsor 5" className="object-contain h-24" />
+          <img src="/Sponsors/Alfalah.webp" alt="Sponsor 6" className="object-contain h-24" />
+          <img src="/Sponsors/BML.webp" alt="Sponsor 7" className="object-contain h-24" />
+          <img src="/Sponsors/Pakqatar.webp" alt="Sponsor 8" className="object-contain h-24" />
+          <img src="/Sponsors/UBL.webp" alt="Sponsor 9" className="object-contain h-24" />
+          <img src="/Sponsors/MeezanInvest.webp" alt="Sponsor 10" className="object-contain h-24" />
+          <img src="/Sponsors/HabibMetro.webp" alt="Sponsor 11" className="object-contain h-24" />
+          <img src="/Sponsors/EFU.webp" alt="Sponsor 12" className="object-contain h-24" />
+          <img src="/Sponsors/faysalBank.webp" alt="Sponsor 13" className="object-contain h-24" />
+          <img src="/Sponsors/NBP.webp" alt="Sponsor 14" className="object-contain h-24" />
+          <img src="/Sponsors/BOP.webp" alt="Sponsor 15" className="object-contain h-24" />
           </div>
         </div>
       </motion.section>
