@@ -7,7 +7,7 @@ import Link from 'next/link';
 const events = [
   {
     title: 'International Conference on Islamic Banking & Finance (ICIBF)',
-    images: ['/icibf1.png', '/ftimg-4.jpeg', '/icibf2.jpeg'],
+    images: ['/Portfolio/icibf1.webp', '/Portfolio/ftimg-4.webp', '/Portfolio/icibf2.webp'],
     description: 'The International Conference on Islamic Banking & Finance (ICIBF) is the Finance Society’s flagship event, held annually for 8 consecutive years. It has grown into a premier platform for discussing the latest trends, challenges, and innovations in Islamic finance.',
     themes: [
       'Sustainability and Ethical Finance: Explored the role of Islamic finance in promoting sustainable development and ethical investment practices.',
@@ -21,7 +21,7 @@ const events = [
   },
   {
     title: 'General Body Meetings (GBM)',
-    images: ['/gbm2.jpeg', '/gbm3.png', '/gbm1.jpeg'],
+    images: ['/Portfolio/gbm2.webp', '/Portfolio/gbm3.webp', '/Portfolio/gbm1.webp'],
     description: 'General Body Meetings (GBMs) form the foundation of the Finance Society’s strategic planning and operational framework. These meetings bring together members to set goals, share ideas, and foster a sense of community.',
     themes: [
       'Strategic Planning: Outlined the society’s vision, mission, and key initiatives for the academic year.',
@@ -35,7 +35,7 @@ const events = [
   },
   {
     title: 'Open House',
-    images: ['/openhouse2.jpg', '/ftimg-2.jpeg', '/openhouse3.jpg'],
+    images: ['/Portfolio/openhouse2.webp', '/Portfolio/ftimg-2.webp', '/Portfolio/openhouse3.webp'],
     description: 'The Open House events have been a cornerstone of the Finance Society’s outreach efforts, introducing students to the world of finance and the opportunities offered by the society',
     themes: [
       'Interactive Sessions: Engaged students through Q&A sessions, discussions, and networking opportunities..',
@@ -49,7 +49,7 @@ const events = [
   },
   {
     title: 'Industry Expert & Guest Speaker Sessions',
-    images: ['/js-1.jpeg', '/ftimg-1.jpeg', '/stock-3.jpg'],
+    images: ['/Portfolio/ftimg-1.webp', '/Portfolio/js-1.webp', '/Portfolio/guest-talk-3.webp'],
     description: 'The Finance Society has hosted numerous industry expert and guest speaker sessions, providing students with unparalleled insights into the financial world',
     themes: [
       'Sharing insights into market dynamics, investment strategies, and the future of the Pakistan Stock Exchange (PSX).',
@@ -69,7 +69,7 @@ export default function PortfolioPage() {
     <div className="space-y-15 py-5">
       {/* Hero Section */}
       <motion.section className="relative h-[90vh] flex items-center justify-center text-center pt-0">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/pe.png')" }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/Logo/pe.webp')" }} />
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="max-w-4xl mx-auto px-4 relative z-20">
           <motion.h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
