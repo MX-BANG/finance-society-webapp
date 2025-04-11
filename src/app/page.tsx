@@ -2,39 +2,20 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image'; // Added Next.js Image component
 
 // Import or define events data
 const events = [
   {
     id: 1,
-    title: 'Trading Competition 2024',
-    date: 'March 15, 2025',
+    title: 'International Stock Challenge',
+    date: 'April 25, 2025',
     time: '10:00 AM - 4:00 PM',
-    location: 'Virtual Event',
+    location: 'Institute of Business and Management', // Fixed typo
     description: 'Join our annual trading competition and test your skills in a simulated market environment. Prizes for top performers!',
     category: 'Competition',
-    registrationDeadline: 'March 10, 2024'
+    registrationDeadline: 'April 16, 2025'
   },
-  {
-    id: 2,
-    title: 'Investment Workshop Series',
-    date: 'April 5, 2025',
-    time: '2:00 PM - 5:00 PM',
-    location: 'Finance Lab',
-    description: 'Three-day workshop covering fundamental and technical analysis, portfolio management, and risk assessment.',
-    category: 'Workshop',
-    registrationDeadline: 'April 1, 2024'
-  },
-  {
-    id: 3,
-    title: 'FinTech Innovation Summit',
-    date: 'May 20, 2025',
-    time: '9:00 AM - 6:00 PM',
-    location: 'Main Auditorium',
-    description: 'Explore the intersection of finance and technology with industry leaders and innovative startups.',
-    category: 'Conference',
-    registrationDeadline: 'May 15, 2024'
-  }
 ];
 
 export default function Home() {
@@ -92,16 +73,19 @@ export default function Home() {
         animate="visible"
         variants={containerVariants}
       >
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/stocksbg.webp')" }}
-        />
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/stocksbg.webp"
+            alt="Finance background"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="max-w-4xl mx-auto px-4 relative z-20">
           <motion.h1 
             className="text-4xl md:text-6xl font-bold text-white mb-6"
-            initial="hidden"
-            animate="visible"
             variants={itemVariants}
           >
             Welcome to Finance Society
@@ -141,7 +125,7 @@ export default function Home() {
           What We Offer
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <motion.div
               key={feature.title}
               className="glass-card p-6 rounded-xl text-center"
@@ -180,23 +164,24 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Featured Events</h2>
           
           <div className="space-y-24">
-          <motion.div 
+            <motion.div 
               className="flex flex-col md:flex-row-reverse items-center gap-16"
               variants={itemVariants}
             >
-              <div className="w-full md:w-1/2">
-                <img 
-                  src="/Portfolio/ftimg-4.webp" 
-                  alt="ICIBF" 
-                  className="rounded-lg shadow-lg w-full h-auto"
+              <div className="w-full md:w-1/2 relative aspect-video">
+                <Image
+                  src="/Portfolio/ftimg-4.webp"
+                  alt="ICIBF"
+                  fill
+                  className="rounded-lg shadow-lg object-cover"
                 />
               </div>
               <div className="w-full md:w-1/2">
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">International Conference on Islamic Banking & Finance (ICIBF)</h3>
                 <p className="text-gray-600">
-                The International Conference on Islamic Banking & Finance (ICIBF) is the Finance Society’s flagship
-                event, held annually for 8 consecutive years. It has grown into a premier platform for discussing the
-                latest trends, challenges, and innovations in Islamic finance.
+                  The International Conference on Islamic Banking & Finance (ICIBF) is the Finance Society&apos;s flagship
+                  event, held annually for 8 consecutive years. It has grown into a premier platform for discussing the
+                  latest trends, challenges, and innovations in Islamic finance.
                 </p>
               </div>
             </motion.div>
@@ -205,11 +190,12 @@ export default function Home() {
               className="flex flex-col md:flex-row items-center gap-16"
               variants={itemVariants}
             >
-              <div className="w-full md:w-1/2">
-                <img 
-                  src="/Portfolio/ftimg-1.webp" 
-                  alt="JS Session" 
-                  className="rounded-lg shadow-lg w-full h-auto"
+              <div className="w-full md:w-1/2 relative aspect-video">
+                <Image
+                  src="/Portfolio/ftimg-1.webp"
+                  alt="JS Session"
+                  fill
+                  className="rounded-lg shadow-lg object-cover"
                 />
               </div>
               <div className="w-full md:w-1/2">
@@ -234,28 +220,37 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center px-4">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold text-primary-navy mb-6"
-            initial="hidden"
-            animate="visible"
             variants={itemVariants}
           >
             Our Sponsors
           </motion.h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          <img src="/Sponsors/Meezan.webp" alt="Sponsor 1" className="object-contain h-24" />
-          <img src="/Sponsors/dubaiIslamic.webp" alt="Sponsor 2" className="object-contain h-24" />
-          <img src="/Sponsors/soneri.webp" alt="Sponsor 3" className="object-contain h-24" />
-          <img src="/Sponsors/bankislami.webp" alt="Sponsor 4" className="object-contain h-24" />
-          <img src="/Sponsors/AlBaraka.webp" alt="Sponsor 5" className="object-contain h-24" />
-          <img src="/Sponsors/Alfalah.webp" alt="Sponsor 6" className="object-contain h-24" />
-          <img src="/Sponsors/BML.webp" alt="Sponsor 7" className="object-contain h-24" />
-          <img src="/Sponsors/Pakqatar.webp" alt="Sponsor 8" className="object-contain h-24" />
-          <img src="/Sponsors/UBL.webp" alt="Sponsor 9" className="object-contain h-24" />
-          <img src="/Sponsors/MeezanInvest.webp" alt="Sponsor 10" className="object-contain h-24" />
-          <img src="/Sponsors/HabibMetro.webp" alt="Sponsor 11" className="object-contain h-24" />
-          <img src="/Sponsors/EFU.webp" alt="Sponsor 12" className="object-contain h-24" />
-          <img src="/Sponsors/faysalBank.webp" alt="Sponsor 13" className="object-contain h-24" />
-          <img src="/Sponsors/NBP.webp" alt="Sponsor 14" className="object-contain h-24" />
-          <img src="/Sponsors/BOP.webp" alt="Sponsor 15" className="object-contain h-24" />
+            {[
+              '/Sponsors/Meezan.webp',
+              '/Sponsors/dubaiIslamic.webp',
+              '/Sponsors/soneri.webp',
+              '/Sponsors/bankislami.webp',
+              '/Sponsors/AlBaraka.webp',
+              '/Sponsors/Alfalah.webp',
+              '/Sponsors/BML.webp',
+              '/Sponsors/Pakqatar.webp',
+              '/Sponsors/UBL.webp',
+              '/Sponsors/MeezanInvest.webp',
+              '/Sponsors/HabibMetro.webp',
+              '/Sponsors/EFU.webp',
+              '/Sponsors/faysalBank.webp',
+              '/Sponsors/NBP.webp',
+              '/Sponsors/BOP.webp'
+            ].map((src, index) => (
+              <div key={index} className="relative h-24 w-full">
+                <Image
+                  src={src}
+                  alt={`Sponsor ${index + 1}`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </motion.section>
@@ -285,7 +280,6 @@ export default function Home() {
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             variants={containerVariants}
           >
-            {/* Event Preview Cards */}
             {events.map((event) => (
               <motion.div
                 key={event.id}
