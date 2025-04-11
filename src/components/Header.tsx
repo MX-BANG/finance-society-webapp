@@ -31,32 +31,18 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm">
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-3"> {/* Changed from py-4 to py-3 */}
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-primary-navy">
-          <img src="/Finance Society.png" alt="Finance Society Logo" className="h-16 w-auto custom-logo" />
+            <img src="/Logo/Finance Society.webp" alt="Finance Society Logo" className="h-16 w-auto custom-logo" /> {/* Changed from h-16 to h-14 */}
           </Link>
-
-          
 
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/" className="text-gray-600 hover:text-primary-navy">Home</Link>
             <Link href="/portfolio" className="text-gray-600 hover:text-primary-navy">Portfolio</Link>
-
             <Link href="/magazine" className="text-gray-600 hover:text-primary-navy">Magazine</Link>
             <Link href="/events" className="text-gray-600 hover:text-primary-navy">Events</Link>
             <Link href="/team" className="text-gray-600 hover:text-primary-navy">Team</Link>
-
-            {/* {currentUser ? (
-              <div className="flex items-center space-x-4">
-                <span className="text-gray-600">{currentUser.email}</span>
-                <Button variant="secondary" onClick={handleLogout}>Logout</Button>
-              </div>
-            ) : (
-              <Link href="/login">
-                <Button variant="primary">Login</Button>
-              </Link>
-            )} */}
           </div>
 
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -75,24 +61,12 @@ const Header = () => {
           animate={{ height: isOpen ? 'auto' : 0 }}
           className="md:hidden overflow-hidden"
         >
-          <div className="py-4 space-y-4">
+          <div className="py-3 space-y-3"> {/* Changed from py-4 space-y-4 */}
             <Link href="/" className="block text-gray-600 hover:text-primary-navy">Home</Link>
             <Link href="/portfolio" className="block text-gray-600 hover:text-primary-navy">Portfolio</Link>
-
             <Link href="/magazine" className="block text-gray-600 hover:text-primary-navy">Magazine</Link>
             <Link href="/events" className="block text-gray-600 hover:text-primary-navy">Events</Link>
             <Link href="/team" className="block text-gray-600 hover:text-primary-navy">Team</Link>
-
-            {/* {currentUser ? (
-              <div className="space-y-4">
-                <span className="block text-gray-600">{currentUser.email}</span>
-                <Button variant="secondary" onClick={handleLogout} className="w-full">Logout</Button>
-              </div>
-            ) : (
-              <Link href="/login">
-                <Button variant="primary" className="w-full">Login</Button>
-              </Link>
-            )} */}
           </div>
         </motion.div>
       </nav>
