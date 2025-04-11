@@ -16,7 +16,7 @@ const articles = [
     date: 'February 28, 2024',
     readTime: '5 min read',
     excerpt: 'A comprehensive guide to understanding and navigating market volatility in today\'s dynamic financial landscape.',
-    image: '/Magzinetest.jpg',
+    image: '/Magazine/Magzinetest.webp',
     link: 'https://open.substack.com/pub/stockinsider/p/warren-buffett-sells-the-s-and-p500?utm_campaign=post&utm_medium=web', 
   },
   {
@@ -27,7 +27,7 @@ const articles = [
     date: 'February 25, 2024',
     readTime: '7 min read',
     excerpt: 'Exploring the growing trend of ESG investing and its impact on portfolio management strategies.',
-    image: '/mag1.jpeg',
+    image: '/Magazine/mag1.webp',
     link: 'https://example.com/articles/2', // Individual link for article 2
   },
   {
@@ -38,7 +38,7 @@ const articles = [
     date: 'February 22, 2024',
     readTime: '10 min read',
     excerpt: 'Deep dive into the technical aspects of cryptocurrency trading and blockchain technology.',
-    image: '/crypto.jpeg',
+    image: '/Magazine/crypto.webp',
     link: 'https://example.com/articles/3', // Individual link for article 3
   },
 ];
