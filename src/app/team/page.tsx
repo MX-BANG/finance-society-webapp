@@ -8,7 +8,7 @@ const teamMembers = [
     name: 'Manesh Kumar',
     role: 'President',
     bio: 'Investment Analyst at Lumida Wealth.',
-    image: '/Manesh.png',
+    image: '/Team/Manesh.webp',
     linkedin: 'https://www.linkedin.com/in/maneshkh/',
     category: 'Top Bodies'
   },
@@ -16,7 +16,7 @@ const teamMembers = [
     name: 'Ayesha Issa',
     role: 'Vice President',
     bio: 'Specializes in market analysis and trading strategies.',
-    image: '/Ayesha-Issa.jpg',
+    image: '/Team/AyeshaIssa.webp',
     linkedin: 'https://www.linkedin.com/in/ayesha-issa-3b999b279/',
     category: 'Top Bodies'
   },
@@ -24,19 +24,296 @@ const teamMembers = [
     name: 'Manoj Kumar',
     role: 'Vice President',
     bio: 'Specializes in market analysis and trading strategies.',
-    image: '/Manoj-Kumar.jpg',
+    image: '/Team/ManojLohana.webp',
     linkedin: 'https://www.linkedin.com/in/manoj-lohana/',
+    category: 'Top Bodies'
+  },
+  {
+    name: 'Muhammad Hammad',
+    role: 'General Secretary',
+    bio: 'The driving force behind our operations as General Secretary!',
+    image: '/Team/MuhammadHammad.webp',
+    linkedin: 'https://www.linkedin.com/in/ayesha-issa-3b999b279/',
+    category: 'Top Bodies'
+  },
+  {
+    name: 'Hafsa Sohail',
+    role: 'Finance Secretary',
+    bio: 'overseeing budgets and ensuring smooth financial operations.',
+    image: '/Team/HafsaSohail.webp',
+    linkedin: 'https://www.linkedin.com/in/ayesha-issa-3b999b279/',
+    category: 'Top Bodies'
+  },
+  {
+    name: 'Isra Ghous',
+    role: 'Group Head',
+    bio: 'leading strategic initiatives and financial leadership within Finance Society',
+    image: '/Team/IsraGhous.webp',
+    linkedin: 'https://www.linkedin.com/in/ayesha-issa-3b999b279/',
+    category: 'Top Bodies'
+  },
+  {
+    name: 'Hussain Abbas',
+    role: 'Group Head',
+    bio: 'Group Head of Finance Society, steering financial strategy and fostering collaborative team growth',
+    image: '/Team/HussainAbbas.webp',
+    linkedin: 'https://www.linkedin.com/in/ayesha-issa-3b999b279/',
     category: 'Top Bodies'
   },
   {
     name: 'Moiz Ali Siddiqui',
     role: 'Developer',
     bio: 'Full Stack Developer with AI integration expertise.',
-    image: '/moiz-picture.jpg',
+    image: '/Team/moiz-picture.webp',
     linkedin: 'https://www.linkedin.com/in/moizalisiddiqui/',
     category: 'Top Bodies'
+  },
+
+  // Marketing
+  {
+    name: 'Arej Khan',
+    role: 'Executive Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Marketing'
+  },
+  {
+    name: 'Khadija Akbar',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Marketing'
+  },
+  {
+    name: 'Haris Alam',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Marketing'
+  },
+  {
+    name: 'Manahil Qadeer Khan',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Marketing'
+  },
+  {
+    name: 'Hamza Naseem Elhai',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Marketing'
+  },
+
+  // Publications
+  {
+    name: 'Mahnoor Sajid Khan',
+    role: 'Executive Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Publications'
+  },
+  {
+    name: 'Amna Ayub Siddiqui',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Publications'
+  },
+  {
+    name: 'Syed Ibrahim Hussain',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Publications'
+  },
+
+  // HR
+  {
+    name: 'Mustabshirah Hanif',
+    role: 'Executive Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'HR'
+  },
+  {
+    name: 'Pranjal Kumari',
+    role: 'Executive Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'HR'
+  },
+  {
+    name: 'Imamah Hanif',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'HR'
+  },
+  {
+    name: 'Muhammad Ibrahim',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'HR'
+  },
+  {
+    name: 'Sameen Syed',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'HR'
+  },
+  {
+    name: 'Kalpana Ratan',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'HR'
+  },
+  {
+    name: 'Aizah Rasheed',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'HR'
+  },
+
+  // Events
+  {
+    name: 'Faiz Khan Nizamani',
+    role: 'Executive Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Events'
+  },
+  {
+    name: 'Syed Usarim Ali Shah',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Events'
+  },
+  {
+    name: 'Javeria Abdul Wahid',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Events'
+  },
+  {
+    name: 'Maha Yasir',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Events'
+  },
+  {
+    name: 'Abdul Qadir',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Events'
+  },
+
+  // Corporate
+  {
+    name: 'Syed Bilal Hassan',
+    role: 'Executive Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Corporate'
+  },
+  {
+    name: 'Lerish',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Corporate'
+  },
+  {
+    name: 'Muhammad Umair',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Corporate'
+  },
+  {
+    name: 'Humna Sajjad',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Corporate'
+  },
+  {
+    name: 'Israh Mazhar',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Corporate'
+  },
+
+  // Logistics
+  {
+    name: 'Syed M Ali',
+    role: 'Executive Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Logistics'
+  },
+  {
+    name: 'M Taha',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Logistics'
+  },
+  {
+    name: 'Usman Ul Haq',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Logistics'
+  },
+  {
+    name: 'Hammadullah Khan',
+    role: 'Director',
+    bio: '',
+    image: '/default.webp',
+    linkedin: '',
+    category: 'Logistics'
   }
 ];
+
 
 const TeamPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('Top Bodies');
