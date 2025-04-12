@@ -77,7 +77,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Marketing'
   },
   {
@@ -85,7 +85,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Marketing'
   },
   {
@@ -93,7 +93,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Marketing'
   },
   {
@@ -101,7 +101,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Marketing'
   },
   {
@@ -109,7 +109,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Marketing'
   },
 
@@ -119,7 +119,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Publications'
   },
   {
@@ -127,7 +127,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Publications'
   },
   {
@@ -135,7 +135,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Publications'
   },
 
@@ -145,7 +145,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'HR'
   },
   {
@@ -153,7 +153,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'HR'
   },
   {
@@ -161,7 +161,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'HR'
   },
   {
@@ -169,7 +169,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'HR'
   },
   {
@@ -177,7 +177,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'HR'
   },
   {
@@ -185,7 +185,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'HR'
   },
   {
@@ -193,7 +193,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'HR'
   },
 
@@ -203,7 +203,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Events'
   },
   {
@@ -211,7 +211,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Events'
   },
   {
@@ -219,7 +219,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Events'
   },
   {
@@ -227,7 +227,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Events'
   },
   {
@@ -235,7 +235,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Events'
   },
 
@@ -245,7 +245,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Corporate'
   },
   {
@@ -253,7 +253,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Corporate'
   },
   {
@@ -261,7 +261,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Corporate'
   },
   {
@@ -269,7 +269,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Corporate'
   },
   {
@@ -277,7 +277,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Corporate'
   },
 
@@ -287,7 +287,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Logistics'
   },
   {
@@ -295,7 +295,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Logistics'
   },
   {
@@ -303,7 +303,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Logistics'
   },
   {
@@ -311,7 +311,7 @@ const teamMembers = [
     role: 'Director',
     bio: '',
     image: '/default.webp',
-    linkedin: '',
+    linkedin: '#',
     category: 'Logistics'
   }
 ];
