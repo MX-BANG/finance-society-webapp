@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const events = [
   {
@@ -69,10 +68,23 @@ export default function PortfolioPage() {
     <div className="space-y-15 py-5">
       {/* Hero Section */}
       <motion.section className="relative h-[90vh] flex items-center justify-center text-center pt-0">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/Logo/pe.webp')" }} />
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/Logo/pe.webp"
+            alt="Finance Society Events Background"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="max-w-4xl mx-auto px-4 relative z-20">
-          <motion.h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <motion.h1 
+            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
             Past Events by Finance Society
           </motion.h1>
         </div>
@@ -83,35 +95,47 @@ export default function PortfolioPage() {
         {events.map((event, index) => (
           <motion.div 
             key={index} 
-            className="max-w-6xl mx-auto space-y-6"
+            className="max-w-6xl mx-auto space-y-6 px-4"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            {/* Large Images on Top */}
-            <div className="grid grid-cols-1 gap-4 w-full">
-              <div className="grid grid-cols-3 gap-4">
-                {event.images.map((img, i) => (
-                  <Image key={i} src={img} alt={event.title} width={800} height={600} className="rounded-lg shadow-lg w-full h-auto" />
-                ))}
-              </div>
+            {/* Image Gallery */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+              {event.images.map((img, i) => (
+                <div key={i} className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src={img}
+                    alt={`${event.title} - Image ${i+1}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+              ))}
             </div>
-            {/* Details Below */}
+
+            {/* Event Details */}
             <div className="text-center">
-              <h2 className="text-4xl font-bold mb-6">{event.title}</h2>
-              <p className="text-xl text-gray-700 mb-4">{event.description}</p>
-              <h3 className="text-2xl font-semibold mb-2">Key Themes:</h3>
-              <ul className="list-disc list-inside text-lg text-gray-600 mb-4">
-                {event.themes.map((theme, i) => (
-                  <li key={i}>{theme}</li>
-                ))}
-              </ul>
-              <h3 className="text-2xl font-semibold mb-2">Impact:</h3>
-              <ul className="list-disc list-inside text-lg text-gray-600">
-                {event.impact.map((impact, i) => (
-                  <li key={i}>{impact}</li>
-                ))}
-              </ul>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">{event.title}</h2>
+              <p className="text-lg md:text-xl text-gray-700 mb-6">{event.description}</p>
+              
+              <div className="text-left max-w-3xl mx-auto">
+                <h3 className="text-2xl font-semibold mb-4">Key Themes:</h3>
+                <ul className="list-disc pl-5 space-y-2 text-gray-600 mb-8">
+                  {event.themes.map((theme, i) => (
+                    <li key={`theme-${i}`} className="text-base md:text-lg">{theme}</li>
+                  ))}
+                </ul>
+
+                <h3 className="text-2xl font-semibold mb-4">Impact:</h3>
+                <ul className="list-disc pl-5 space-y-2 text-gray-600">
+                  {event.impact.map((impact, i) => (
+                    <li key={`impact-${i}`} className="text-base md:text-lg">{impact}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </motion.div>
         ))}
