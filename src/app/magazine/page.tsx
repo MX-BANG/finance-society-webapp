@@ -1,11 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react'; // Import useState
-import Link from 'next/link'; // Import Link
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import Card from '../../components/Card';
 import Button from '../../components/Button';
-import { a } from 'framer-motion/client';
 
 const articles = [
   {
@@ -15,9 +15,9 @@ const articles = [
     author: 'Sarah Johnson',
     date: 'February 28, 2024',
     readTime: '5 min read',
-    excerpt: 'A comprehensive guide to understanding and navigating market volatility in today\'s dynamic financial landscape.',
+    excerpt: 'A comprehensive guide to understanding and navigating market volatility in today&apos;s dynamic financial landscape.',
     image: '/Magazine/Magzinetest.webp',
-    link: 'https://open.substack.com/pub/stockinsider/p/warren-buffett-sells-the-s-and-p500?utm_campaign=post&utm_medium=web', 
+    link: 'https://open.substack.com/pub/stockinsider/p/warren-buffett-sells-the-s-and-p500?utm_campaign=post&utm_medium=web',
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const articles = [
     readTime: '7 min read',
     excerpt: 'Exploring the growing trend of ESG investing and its impact on portfolio management strategies.',
     image: '/Magazine/mag1.webp',
-    link: 'https://example.com/articles/2', // Individual link for article 2
+    link: '/magazine/the-rise-of-sustainable-investing',
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const articles = [
     readTime: '10 min read',
     excerpt: 'Deep dive into the technical aspects of cryptocurrency trading and blockchain technology.',
     image: '/Magazine/crypto.webp',
-    link: 'https://example.com/articles/3', // Individual link for article 3
+    link: '/magazine/cryptocurrency-technical-analysis',
   },
 ];
 
@@ -53,7 +53,8 @@ const categories = [
 ];
 
 const MagazinePage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All Articles'); // State to track selected category
+  const [selectedCategory, setSelectedCategory] = useState('All Articles');
+  const [email, setEmail] = useState('');
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -73,10 +74,16 @@ const MagazinePage = () => {
     },
   };
 
-  // Filter articles based on selected category
   const filteredArticles = selectedCategory === 'All Articles'
     ? articles
     : articles.filter(article => article.category === selectedCategory);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Add your subscription logic here
+    console.log('Subscribed with:', email);
+    setEmail('');
+  };
 
   return (
     <div className="section-padding py-16">
@@ -119,7 +126,8 @@ const MagazinePage = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setSelectedCategory(category)} // Update selected category on click
+              onClick={() => setSelectedCategory(category)}
+              aria-label={`Filter by ${category}`}
             >
               {category}
             </motion.button>
@@ -132,25 +140,38 @@ const MagazinePage = () => {
           variants={containerVariants}
         >
           {filteredArticles.map((article) => (
-            <Link key={article.id} href={article.link} passHref>
-              <Card className="p-0">
-                <div
-                  className="aspect-video bg-gray-100 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${article.image})` }} // Use the article image
-                />
-                <div className="p-6">
-                  <span className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 mb-4">
-                    {article.category}
-                  </span>
-                  <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
-                  <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <span>{article.date}</span>
-                    <span>{article.readTime}</span>
-                  </div>
-                </div>
-              </Card>
-            </Link>
+            <motion.div
+              key={article.id}
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+            >
+              <Link href={article.link} passHref legacyBehavior>
+                <a className="block h-full" aria-label={`Read ${article.title}`}>
+                  <Card className="p-0 h-full flex flex-col">
+                    <div className="relative aspect-video">
+                      <Image
+                        src={article.image}
+                        alt={article.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
+                    <div className="p-6 flex-grow">
+                      <span className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 mb-4">
+                        {article.category}
+                      </span>
+                      <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
+                      <p className="text-gray-600 mb-4">{article.excerpt}</p>
+                      <div className="flex items-center justify-between text-sm text-gray-500 mt-auto">
+                        <span>{article.date}</span>
+                        <span>{article.readTime}</span>
+                      </div>
+                    </div>
+                  </Card>
+                </a>
+              </Link>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -166,16 +187,20 @@ const MagazinePage = () => {
             <p className="text-gray-300 mb-6">
               Get the latest financial insights and analysis delivered straight to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 justify-center">
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 flex-grow max-w-md"
+                required
+                aria-label="Email address for newsletter subscription"
               />
-              <Button variant="secondary">
+              <Button variant="secondary" type="submit">
                 Subscribe
               </Button>
-            </div>
+            </form>
           </div>
         </motion.div>
       </motion.div>
