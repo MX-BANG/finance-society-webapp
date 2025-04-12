@@ -1,13 +1,17 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, MotionProps } from 'framer-motion';
 import { ButtonHTMLAttributes } from 'react';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonBaseProps = {
   variant?: 'primary' | 'secondary';
   fullWidth?: boolean;
   children: React.ReactNode;
-}
+};
+
+type ButtonProps = ButtonBaseProps & 
+  ButtonHTMLAttributes<HTMLButtonElement> & 
+  MotionProps;
 
 const Button = ({ 
   variant = 'primary', 
@@ -28,7 +32,7 @@ const Button = ({
       className={`${baseStyles} ${variantStyles[variant]} ${widthStyles} ${className}`}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      {...(props as any)} // Cast props to any to avoid type issues
+      {...props}
     >
       {children}
     </motion.button>
