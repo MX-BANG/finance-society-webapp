@@ -15,7 +15,7 @@ const events = [
     category: 'Competition',
     registrationDeadline: 'April 16, 2025',
     registrationLink: '#', // Placeholder for Google Form URL
-    image: '/event-stock-challenge.webp' // Added image path
+    image: '/events/stockchallenge.webp' // Added image path
   },
 ];
 
