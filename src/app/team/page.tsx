@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const teamMembers = [
   {
@@ -103,7 +105,7 @@ const teamMembers = [
     category: 'Marketing'
   },
   {
-    name: 'Hamza Naseem Elhai',
+    name: 'Hamza Naseem Elahi',
     role: 'Director',
     bio: '',
     image: '/default.webp',
@@ -314,9 +316,9 @@ const teamMembers = [
   }
 ];
 
-
 const TeamPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('Top Bodies');
+  const categories = ['Top Bodies', 'HR', 'Marketing', 'Events', 'Corporate', 'Logistics', 'Publications'];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -336,21 +338,17 @@ const TeamPage = () => {
     }
   };
 
-  const categories = ['Top Bodies', 'HR', 'Marketing', 'Events', 'Corporate', 'Logistics', 'Publications'];
-
-  const filteredMembers = selectedCategory === 'All' 
-    ? teamMembers 
-    : teamMembers.filter(member => member.category === selectedCategory);
+  const filteredMembers = teamMembers.filter(member => member.category === selectedCategory);
   
   return (
     <div className="section-padding py-16">
-
       <motion.div
         initial="hidden"
         animate="visible"
         variants={containerVariants}
         className="space-y-8"
       >
+        {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <motion.h1 
             className="text-4xl md:text-5xl font-bold mb-4"
@@ -365,7 +363,8 @@ const TeamPage = () => {
             We are a group of passionate individuals dedicated to empowering future financial leaders through education and practical experience.
           </motion.p>
         </div>
- {/* Categories */}
+
+        {/* Categories */}
         <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
           variants={containerVariants}
@@ -373,7 +372,7 @@ const TeamPage = () => {
           {categories.map((category) => (
             <motion.button
               key={category}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
                 ${
                   selectedCategory === category
                     ? 'bg-primary-navy text-white'
@@ -382,73 +381,99 @@ const TeamPage = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setSelectedCategory(category)} // Update selected category on click
+              onClick={() => setSelectedCategory(category)}
+              aria-label={`Show ${category} team members`}
             >
               {category}
             </motion.button>
           ))}
         </motion.div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-        >
-          {filteredMembers.map((member, index) => (
-            <motion.div
-              key={member.name}
-              className="glass-card p-6 rounded-xl"
-              variants={itemVariants}
-              whileHover={{ 
-                y: -5,
-                transition: { duration: 0.2 }
-              }}
-            >
-              <div className="aspect-square rounded-full bg-gray-200 mb-4 overflow-hidden">
-                <img src={member.image} alt={member.name} className="w-full h-full object-cover" /> {/* Render the member image */}
-              </div>
-
-              <h2 className="text-xl font-semibold mb-2">{member.name}</h2>
-              <p className="text-primary-navy font-medium mb-3">{member.role}</p>
-              <p className="text-gray-600 mb-4">{member.bio}</p>
-              <a 
-                href={member.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-primary-navy hover:text-accent-blue transition-colors"
+        {/* Team Members Grid */}
+        {filteredMembers.length > 0 ? (
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+          >
+            {filteredMembers.map((member) => (
+              <motion.div
+                key={`${member.name}-${member.role}`}
+                className="glass-card p-6 rounded-xl flex flex-col"
+                variants={itemVariants}
+                whileHover={{ 
+                  y: -5,
+                  transition: { duration: 0.2 }
+                }}
               >
-                <span>Connect on LinkedIn</span>
-                <svg 
-                  className="w-5 h-5 ml-2" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" 
+                <div className="aspect-square rounded-full bg-gray-200 mb-4 overflow-hidden w-full">
+                  <Image
+                    src={member.image}
+                    alt={`${member.name}'s profile picture`}
+                    width={300}
+                    height={300}
+                    className="object-cover w-full h-full"
                   />
-                </svg>
-              </a>
-            </motion.div>
-          ))}
-        </motion.div>
+                </div>
 
+                <h2 className="text-xl font-semibold mb-2 text-center">{member.name}</h2>
+                <p className="text-primary-navy font-medium mb-3 text-center">{member.role}</p>
+                {member.bio && <p className="text-gray-600 mb-4 text-center">{member.bio}</p>}
+                
+                {member.linkedin && (
+                  <Link
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto mx-auto inline-flex items-center text-primary-navy hover:text-accent-blue transition-colors"
+                    aria-label={`Connect with ${member.name} on LinkedIn`}
+                  >
+                    <span>Connect on LinkedIn</span>
+                    <svg 
+                      className="w-5 h-5 ml-2" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" 
+                      />
+                    </svg>
+                  </Link>
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
+        ) : (
+          <motion.p 
+            className="text-center text-gray-600 py-12"
+            variants={itemVariants}
+          >
+            No team members found in this category.
+          </motion.p>
+        )}
+
+        {/* Join Our Team Section */}
         <motion.div 
           className="text-center mt-12"
           variants={itemVariants}
         >
           <h2 className="text-2xl font-semibold mb-4">Join Our Team</h2>
           <p className="text-gray-600 mb-6">
-            We're always looking for passionate individuals to join our team. 
-            If you're interested in contributing to the Finance Society, we'd love to hear from you.
+            We&apos;re always looking for passionate individuals to join our team. 
+            If you&apos;re interested in contributing to the Finance Society, we&apos;d love to hear from you.
           </p>
-          <a href="https://docs.google.com/forms/d/e/your-form-id/viewform" target="_blank" rel="noopener noreferrer">
-            <button className="btn-primary">
-              Apply Now
-            </button>
-          </a>
+          <Link 
+            href="https://docs.google.com/forms/d/e/your-form-id/viewform" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-primary inline-block"
+          >
+            Apply Now
+          </Link>
         </motion.div>
       </motion.div>
     </div>
