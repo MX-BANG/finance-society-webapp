@@ -238,7 +238,7 @@ export default function Home() {
               '/Sponsors/MeezanInvest.webp',
               '/Sponsors/HabibMetro.webp',
               '/Sponsors/EFU.webp',
-              '/Sponsors/faysalBank.webp',
+              '/Sponsors/faysalbank.webp',
               '/Sponsors/NBP.webp',
               '/Sponsors/BOP.webp'
             ].map((src, index) => (
