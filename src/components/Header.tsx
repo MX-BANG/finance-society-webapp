@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
@@ -12,12 +13,13 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-primary-navy" aria-label="Finance Society Home">
-            <img 
+            <Image
               src="/Logo/Finance Society.webp" 
-              alt="Finance Society Logo" 
-              className="h-16 w-auto custom-logo"
+              alt="Finance Society Logo"
               width={160}
               height={64}
+              className="h-16 w-auto"
+              priority
             />
           </Link>
 
@@ -44,26 +46,25 @@ const Header = () => {
   );
 };
 
-// Reusable NavLink component
+// Reusable components remain the same as in your original code
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <Link href={href} className="text-gray-600 hover:text-primary-navy transition-colors duration-200">
     {children}
   </Link>
 );
 
-// Reusable MobileNavLink component
 const MobileNavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <Link href={href} className="block py-2 text-gray-600 hover:text-primary-navy transition-colors duration-200">
     {children}
   </Link>
 );
 
-// MobileMenuButton component
 const MobileMenuButton = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void }) => (
   <button 
     className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-navy"
     onClick={onClick}
     aria-label="Toggle menu"
+    aria-expanded={isOpen}
   >
     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       {isOpen ? (
@@ -75,7 +76,6 @@ const MobileMenuButton = ({ isOpen, onClick }: { isOpen: boolean; onClick: () =>
   </button>
 );
 
-// MobileMenu component
 const MobileMenu = ({ isOpen, children }: { isOpen: boolean; children: React.ReactNode }) => (
   <motion.div
     initial={false}
@@ -85,6 +85,7 @@ const MobileMenu = ({ isOpen, children }: { isOpen: boolean; children: React.Rea
     }}
     transition={{ duration: 0.2 }}
     className="md:hidden overflow-hidden"
+    aria-hidden={!isOpen}
   >
     <div className="py-3 space-y-3">
       {children}

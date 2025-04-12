@@ -51,7 +51,7 @@ const teamMembers = [
     role: 'Group Head',
     bio: 'leading strategic initiatives and financial leadership within Finance Society',
     image: '/Team/IsraGhous.webp',
-    linkedin: 'https://www.linkedin.com/in/ayesha-issa-3b999b279/',
+    linkedin: 'https://www.linkedin.com/in/isra-ghous-1a5511244/',
     category: 'Top Bodies'
   },
   {
@@ -389,7 +389,7 @@ const TeamPage = () => {
           ))}
         </motion.div>
 
-        {/* Team Members Grid */}
+        {/* Team Members Grid - PRESERVING ORIGINAL SIZES */}
         {filteredMembers.length > 0 ? (
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -398,20 +398,21 @@ const TeamPage = () => {
             {filteredMembers.map((member) => (
               <motion.div
                 key={`${member.name}-${member.role}`}
-                className="glass-card p-6 rounded-xl flex flex-col"
+                className="glass-card p-6 rounded-xl flex flex-col" // Your original card class
                 variants={itemVariants}
                 whileHover={{ 
                   y: -5,
                   transition: { duration: 0.2 }
                 }}
               >
+                {/* Image - PRESERVING ORIGINAL SIZE */}
                 <div className="aspect-square rounded-full bg-gray-200 mb-4 overflow-hidden w-full">
                   <Image
                     src={member.image}
-                    alt={`${member.name}'s profile picture`}
-                    width={300}
-                    height={300}
-                    className="object-cover w-full h-full"
+                    alt={`${member.name}'s profile`} // Fixed alt text
+                    width={300} // Your original size
+                    height={300} // Your original size
+                    className="object-cover w-full h-full" // Your original styling
                   />
                 </div>
 
@@ -419,7 +420,7 @@ const TeamPage = () => {
                 <p className="text-primary-navy font-medium mb-3 text-center">{member.role}</p>
                 {member.bio && <p className="text-gray-600 mb-4 text-center">{member.bio}</p>}
                 
-                {member.linkedin && (
+                {member.linkedin && member.linkedin !== '#' && (
                   <Link
                     href={member.linkedin}
                     target="_blank"
