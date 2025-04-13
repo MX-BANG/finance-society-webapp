@@ -35,26 +35,35 @@ const Header = () => {
         </div>
 
         <MobileMenu isOpen={isOpen}>
-          <MobileNavLink href="/">Home</MobileNavLink>
-          <MobileNavLink href="/portfolio">Portfolio</MobileNavLink>
-          <MobileNavLink href="/magazine">Magazine</MobileNavLink>
-          <MobileNavLink href="/events">Events</MobileNavLink>
-          <MobileNavLink href="/team">Team</MobileNavLink>
+          <MobileNavLink href="/" setIsOpen={setIsOpen}>Home</MobileNavLink>
+          <MobileNavLink href="/portfolio" setIsOpen={setIsOpen}>Portfolio</MobileNavLink>
+          <MobileNavLink href="/magazine" setIsOpen={setIsOpen}>Magazine</MobileNavLink>
+          <MobileNavLink href="/events" setIsOpen={setIsOpen}>Events</MobileNavLink>
+          <MobileNavLink href="/team" setIsOpen={setIsOpen}>Team</MobileNavLink>
         </MobileMenu>
       </nav>
     </header>
   );
 };
 
-// Reusable components remain the same as in your original code
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <Link href={href} className="text-gray-600 hover:text-primary-navy transition-colors duration-200">
     {children}
   </Link>
 );
 
-const MobileNavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <Link href={href} className="block py-2 text-gray-600 hover:text-primary-navy transition-colors duration-200">
+interface MobileNavLinkProps {
+  href: string;
+  children: React.ReactNode;
+  setIsOpen: (isOpen: boolean) => void;
+}
+
+const MobileNavLink = ({ href, children, setIsOpen }: MobileNavLinkProps) => (
+  <Link 
+    href={href} 
+    className="block py-2 text-gray-600 hover:text-primary-navy transition-colors duration-200"
+    onClick={() => setIsOpen(false)}
+  >
     {children}
   </Link>
 );
@@ -76,7 +85,12 @@ const MobileMenuButton = ({ isOpen, onClick }: { isOpen: boolean; onClick: () =>
   </button>
 );
 
-const MobileMenu = ({ isOpen, children }: { isOpen: boolean; children: React.ReactNode }) => (
+interface MobileMenuProps {
+  isOpen: boolean;
+  children: React.ReactNode;
+}
+
+const MobileMenu = ({ isOpen, children }: MobileMenuProps) => (
   <motion.div
     initial={false}
     animate={{ 
