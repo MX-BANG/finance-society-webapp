@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image'; // Added Next.js Image component
+import Image from 'next/image';
 
 // Import or define events data
 const events = [
@@ -11,10 +11,11 @@ const events = [
     title: 'International Stock Challenge',
     date: 'April 25, 2025',
     time: '10:00 AM - 4:00 PM',
-    location: 'Institute of Business and Management', // Fixed typo
+    location: 'Institute of Business and Management',
     description: 'Join our annual trading competition and test your skills in a simulated market environment. Prizes for top performers!',
     category: 'Competition',
-    registrationDeadline: 'April 16, 2025'
+    registrationDeadline: 'April 16, 2025',
+    registrationLink: 'https://forms.gle/JkhGQmrToS2jauq27'
   },
 ];
 
@@ -75,7 +76,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="/stocksbg.webp"
+            src="/events/ISC Front-1.png"
             alt="Finance background"
             fill
             className="object-cover"
@@ -88,23 +89,26 @@ export default function Home() {
             className="text-4xl md:text-6xl font-bold text-white mb-6"
             variants={itemVariants}
           >
-            Welcome to Finance Society
+            International Stock Challenge
           </motion.h1>
           <motion.p 
             className="text-xl text-gray-200 mb-8"
             variants={itemVariants}
           >
-            Empowering future financial leaders through education, experience, and excellence
+            For the first time ever at Institute of Business Management, Finance
+            Society is presenting an exciting competition that will mimic the
+            real-world trading scenario, establishing the 'Trader's Mindset' for
+            the youth.
           </motion.p>
           <motion.div 
             className="flex flex-wrap justify-center gap-4"
             variants={itemVariants}
           >
-            <Link href="/register" className="btn-primary">
-              Join Now
+            <Link href="https://forms.gle/JkhGQmrToS2jauq27"  target="_blank" className="btn-primary">
+              Register Now
             </Link>
-            <Link href="/events" className="btn-secondary">
-              Explore Events
+            <Link href="/isc" className="btn-secondary">
+              Explore
             </Link>
           </motion.div>
         </div>
@@ -112,42 +116,61 @@ export default function Home() {
 
       {/* Features Section */}
       <motion.section 
-        className="py-16"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
+  className="py-16"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={containerVariants}
+>
+  <motion.h2 
+    className="text-3xl md:text-4xl font-bold text-center mb-12"
+    variants={itemVariants}
+  >
+    What We Offer
+  </motion.h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+    {features.map((feature) => (
+      <motion.div
+        key={feature.title}
+        className="glass-card p-6 rounded-xl text-center"
+        variants={itemVariants}
+        whileHover={{ 
+          y: -5,
+          transition: { duration: 0.2 }
+        }}
       >
-        <motion.h2 
-          className="text-3xl md:text-4xl font-bold text-center mb-12"
-          variants={itemVariants}
+        <div className="text-4xl mb-4">{feature.icon}</div>
+        <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+        <p className="text-grey mb-4">{feature.description}</p>
+        <Link 
+          href={feature.link}
+          className="text-primary-navy hover:text-accent-blue transition-colors group"
         >
-          What We Offer
-        </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-          {features.map((feature) => (
-            <motion.div
-              key={feature.title}
-              className="glass-card p-6 rounded-xl text-center"
-              variants={itemVariants}
-              whileHover={{ 
-                y: -5,
-                transition: { duration: 0.2 }
-              }}
-            >
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-grey mb-4">{feature.description}</p>
-              <Link 
-                href={feature.link}
-                className="text-primary-navy hover:text-accent-blue transition-colors"
-              >
-                Learn More →
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
+          {feature.title === 'Our Portfolio' && (
+            <>
+              View Gallery <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+            </>
+          )}
+          {feature.title === 'Events & Competitions' && (
+            <>
+              Join Now <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+            </>
+          )}
+          {feature.title === 'Financial Magazine' && (
+            <>
+              Read Latest <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+            </>
+          )}
+          {feature.title === 'Expert Team' && (
+            <>
+              Meet Us <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+            </>
+          )}
+        </Link>
+      </motion.div>
+    ))}
+  </div>
+</motion.section>
 
       {/* Featured Events Section */}
       <motion.section 
@@ -238,7 +261,6 @@ export default function Home() {
               '/Sponsors/MeezanInvest.webp',
               '/Sponsors/HabibMetro.webp',
               '/Sponsors/EFU.webp',
-              // '/Sponsors/faysalbank.webp',
               '/Sponsors/NBP.webp',
               '/Sponsors/BOP.webp'
             ].map((src, index) => (
@@ -252,6 +274,17 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <motion.div 
+            className="mt-8"
+            variants={itemVariants}
+          >
+            <Link 
+              href="/become-a-sponsor" 
+              className="text-sm text-gray-500 hover:text-primary-navy transition-colors underline underline-offset-4 decoration-1"
+            >
+              Become a Sponsor
+            </Link>
+          </motion.div>
         </div>
       </motion.section>
 
@@ -341,13 +374,20 @@ export default function Home() {
                   <p className="text-sm text-gray-500">
                     Registration Deadline: {event.registrationDeadline}
                   </p>
-                  <motion.button
-                    className="btn-primary w-full"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                  <Link
+                    href={event.registrationLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary w-full text-center block"
                   >
-                    Register Now
-                  </motion.button>
+                    <motion.span
+                      className="inline-block w-full"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      Register Now
+                    </motion.span>
+                  </Link>
                 </div>
               </motion.div>
             ))}
