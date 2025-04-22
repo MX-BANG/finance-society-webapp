@@ -126,7 +126,7 @@ const teamMembers = [
     name: 'Amna Ayub Siddiqui',
     role: 'Director',
     bio: '',
-    image: '/Team/profileicon.webp',
+    image: '/Team/pfpicon.webp',
     linkedin: '#',
     category: 'Publications'
   },
@@ -176,7 +176,7 @@ const teamMembers = [
     name: 'Sameen Syed',
     role: 'Director',
     bio: '',
-    image: '/Team/profileicon.webp',
+    image: '/Team/pfpicon.webp',
     linkedin: '#',
     category: 'HR'
   },
@@ -226,7 +226,7 @@ const teamMembers = [
     name: 'Javeria Abdul Wahid',
     role: 'Director',
     bio: '',
-    image: '/Team/profileicon.webp',
+    image: '/Team/pfpicon.webp',
     linkedin: '#',
     category: 'Events'
   },
@@ -261,7 +261,7 @@ const teamMembers = [
     name: 'Muhammad Umair',
     role: 'Director',
     bio: '',
-    image: '/Team/profileicon.webp',
+    image: '/Team/pfpicon.webp',
     linkedin: '#',
     category: 'Corporate'
   },
@@ -269,7 +269,7 @@ const teamMembers = [
     name: 'Humna Sajjad',
     role: 'Director',
     bio: '',
-    image: '/Team/profileicon.webp',
+    image: '/Team/pfpicon.webp',
     linkedin: '#',
     category: 'Corporate'
   },
@@ -295,7 +295,7 @@ const teamMembers = [
     name: 'M Taha',
     role: 'Director',
     bio: '',
-    image: '/Team/profileicon.webp',
+    image: '/Team/pfpicon.webp',
     linkedin: '#',
     category: 'Logistics'
   },
