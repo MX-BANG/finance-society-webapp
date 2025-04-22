@@ -118,7 +118,7 @@ const teamMembers = [
     name: 'Mahnoor Sajid Khan',
     role: 'Executive Director',
     bio: '',
-    image: '/ExecutiveDirectors/Mahnoor Sajid Khan.webp',
+    image: '/ExecutiveDirectors/Mahnoor sajid Khan.webp',
     linkedin: '#',
     category: 'Publications'
   },
