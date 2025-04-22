@@ -76,7 +76,7 @@ const teamMembers = [
     name: 'Arej Khan',
     role: 'Executive Director',
     bio: '',
-    image: '/default.webp',
+    image: '/ExecutiveDirectors/Arej Khan.webp',
     linkedin: '#',
     category: 'Marketing'
   },
@@ -84,7 +84,7 @@ const teamMembers = [
     name: 'Khadija Akbar',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Khadija Akbar.webp',
     linkedin: '#',
     category: 'Marketing'
   },
@@ -92,7 +92,7 @@ const teamMembers = [
     name: 'Haris Alam',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Syed Haris Alam.webp',
     linkedin: '#',
     category: 'Marketing'
   },
@@ -100,25 +100,25 @@ const teamMembers = [
     name: 'Manahil Qadeer Khan',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Manahil Qadeer Khan.webp',
     linkedin: '#',
     category: 'Marketing'
   },
-  {
-    name: 'Hamza Naseem Elahi',
-    role: 'Director',
-    bio: '',
-    image: '/default.webp',
-    linkedin: '#',
-    category: 'Marketing'
-  },
+  // {
+  //   name: 'Hamza Naseem Elahi',
+  //   role: 'Director',
+  //   bio: '',
+  //   image: '/Directors/Hamza Naseem Elahi.webp',
+  //   linkedin: '#',
+  //   category: 'Marketing'
+  // },
 
   // Publications
   {
     name: 'Mahnoor Sajid Khan',
     role: 'Executive Director',
     bio: '',
-    image: '/default.webp',
+    image: '/ExecutiveDirectors/Mahnoor Sajid Khan.webp',
     linkedin: '#',
     category: 'Publications'
   },
@@ -126,7 +126,7 @@ const teamMembers = [
     name: 'Amna Ayub Siddiqui',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Team/profileicon.webp',
     linkedin: '#',
     category: 'Publications'
   },
@@ -134,7 +134,7 @@ const teamMembers = [
     name: 'Syed Ibrahim Hussain',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Syed Ibrahim Hussain.webp',
     linkedin: '#',
     category: 'Publications'
   },
@@ -144,7 +144,7 @@ const teamMembers = [
     name: 'Mustabshirah Hanif',
     role: 'Executive Director',
     bio: '',
-    image: '/default.webp',
+    image: '/ExecutiveDirectors/Mustabshirah Hanif.webp',
     linkedin: '#',
     category: 'HR'
   },
@@ -152,7 +152,7 @@ const teamMembers = [
     name: 'Pranjal Kumari',
     role: 'Executive Director',
     bio: '',
-    image: '/default.webp',
+    image: '/ExecutiveDirectors/Pranjal Kumari.webp',
     linkedin: '#',
     category: 'HR'
   },
@@ -160,7 +160,7 @@ const teamMembers = [
     name: 'Imamah Hanif',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Imamah Hanif.webp',
     linkedin: '#',
     category: 'HR'
   },
@@ -168,7 +168,7 @@ const teamMembers = [
     name: 'Muhammad Ibrahim',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Muhammad Ibrahim.webp',
     linkedin: '#',
     category: 'HR'
   },
@@ -176,7 +176,7 @@ const teamMembers = [
     name: 'Sameen Syed',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Team/profileicon.webp',
     linkedin: '#',
     category: 'HR'
   },
@@ -184,7 +184,7 @@ const teamMembers = [
     name: 'Kalpana Ratan',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Kalpana Ratan.webp',
     linkedin: '#',
     category: 'HR'
   },
@@ -192,17 +192,25 @@ const teamMembers = [
     name: 'Aizah Rasheed',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Aizah Rasheed.webp',
     linkedin: '#',
     category: 'HR'
   },
 
   // Events
   {
+    name: 'Abdul Qadir',
+    role: 'Executive Director',
+    bio: '',
+    image: '/ExecutiveDirectors/Abdul Qadir.webp',
+    linkedin: '#',
+    category: 'Events'
+  },
+  {
     name: 'Faiz Khan Nizamani',
     role: 'Executive Director',
     bio: '',
-    image: '/default.webp',
+    image: '/ExecutiveDirectors/Faiz Khan Nizamani.webp',
     linkedin: '#',
     category: 'Events'
   },
@@ -210,7 +218,7 @@ const teamMembers = [
     name: 'Syed Usarim Ali Shah',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Syed Usarim Ali Shah.webp',
     linkedin: '#',
     category: 'Events'
   },
@@ -218,7 +226,7 @@ const teamMembers = [
     name: 'Javeria Abdul Wahid',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Team/profileicon.webp',
     linkedin: '#',
     category: 'Events'
   },
@@ -226,25 +234,18 @@ const teamMembers = [
     name: 'Maha Yasir',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Maha Yasir.webp',
     linkedin: '#',
     category: 'Events'
   },
-  {
-    name: 'Abdul Qadir',
-    role: 'Director',
-    bio: '',
-    image: '/default.webp',
-    linkedin: '#',
-    category: 'Events'
-  },
+  
 
   // Corporate
   {
     name: 'Syed Bilal Hassan',
     role: 'Executive Director',
     bio: '',
-    image: '/default.webp',
+    image: '/ExecutiveDirectors/Syed Bilal Hassan.webp',
     linkedin: '#',
     category: 'Corporate'
   },
@@ -252,7 +253,7 @@ const teamMembers = [
     name: 'Lerish',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Lerish.webp',
     linkedin: '#',
     category: 'Corporate'
   },
@@ -260,7 +261,7 @@ const teamMembers = [
     name: 'Muhammad Umair',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Team/profileicon.webp',
     linkedin: '#',
     category: 'Corporate'
   },
@@ -268,7 +269,7 @@ const teamMembers = [
     name: 'Humna Sajjad',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Team/profileicon.webp',
     linkedin: '#',
     category: 'Corporate'
   },
@@ -276,7 +277,7 @@ const teamMembers = [
     name: 'Israh Mazhar',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Israh Mazhar.webp',
     linkedin: '#',
     category: 'Corporate'
   },
@@ -286,7 +287,7 @@ const teamMembers = [
     name: 'Syed M Ali',
     role: 'Executive Director',
     bio: '',
-    image: '/default.webp',
+    image: '/ExecutiveDirectors/Syed Mohammad Ali.webp',
     linkedin: '#',
     category: 'Logistics'
   },
@@ -294,7 +295,7 @@ const teamMembers = [
     name: 'M Taha',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Team/profileicon.webp',
     linkedin: '#',
     category: 'Logistics'
   },
@@ -302,7 +303,7 @@ const teamMembers = [
     name: 'Usman Ul Haq',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Usman Ul Haq.webp',
     linkedin: '#',
     category: 'Logistics'
   },
@@ -310,7 +311,7 @@ const teamMembers = [
     name: 'Hammadullah Khan',
     role: 'Director',
     bio: '',
-    image: '/default.webp',
+    image: '/Directors/Hammadullah Khan.webp',
     linkedin: '#',
     category: 'Logistics'
   }
