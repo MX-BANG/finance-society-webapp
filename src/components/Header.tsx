@@ -14,7 +14,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-primary-navy" aria-label="Finance Society Home">
             <Image
-              src="/Logo/Finance Society.webp" 
+              src="/Logo/fs_header_logo.webp" 
               alt="Finance Society Logo"
               width={160}
               height={64}
