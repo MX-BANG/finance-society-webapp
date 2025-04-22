@@ -35,7 +35,7 @@ const teamMembers = [
     role: 'General Secretary',
     bio: 'The driving force behind our operations as General Secretary!',
     image: '/Team/MuhammadHammad.webp',
-    linkedin: 'https://www.linkedin.com/in/ayesha-issa-3b999b279/',
+    linkedin: 'https://www.linkedin.com/in/muhammad-h-4ab414203/',
     category: 'Top Bodies'
   },
   {
@@ -43,7 +43,7 @@ const teamMembers = [
     role: 'Finance Secretary',
     bio: 'overseeing budgets and ensuring smooth financial operations.',
     image: '/Team/HafsaSohail.webp',
-    linkedin: 'https://www.linkedin.com/in/ayesha-issa-3b999b279/',
+    linkedin: 'https://www.linkedin.com/in/hafsa-sohail-943931330/',
     category: 'Top Bodies'
   },
   {
@@ -59,7 +59,7 @@ const teamMembers = [
     role: 'Group Head',
     bio: 'Group Head of Finance Society, steering financial strategy and fostering collaborative team growth',
     image: '/Team/HussainAbbas.webp',
-    linkedin: 'https://www.linkedin.com/in/ayesha-issa-3b999b279/',
+    linkedin: 'https://www.linkedin.com/in/hussainabbas4144/',
     category: 'Top Bodies'
   },
   {
@@ -77,7 +77,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/ExecutiveDirectors/Arej Khan.webp',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/arej-fasih-730782283/',
     category: 'Marketing'
   },
   {
@@ -119,7 +119,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/ExecutiveDirectors/Mahnoor sajid Khan.webp',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/mahnoor-sajid-khan-24b99327b/',
     category: 'Publications'
   },
   {
@@ -145,7 +145,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/ExecutiveDirectors/Mustabshirah Hanif.webp',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/mustabshirah-hanif/',
     category: 'HR'
   },
   {
@@ -153,7 +153,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/ExecutiveDirectors/Pranjal Kumari.webp',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/pranjal-kumari-b59207282/',
     category: 'HR'
   },
   {
@@ -203,7 +203,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/ExecutiveDirectors/Abdul Qadir.webp',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/abdul-qadir-akhlaq/',
     category: 'Events'
   },
   {
@@ -211,7 +211,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/ExecutiveDirectors/Faiz Khan Nizamani.webp',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/faiz-khan-nizamani/',
     category: 'Events'
   },
   {
@@ -246,7 +246,7 @@ const teamMembers = [
     role: 'Executive Director',
     bio: '',
     image: '/ExecutiveDirectors/Syed Bilal Hassan.webp',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/syed-bilal-hassan02/',
     category: 'Corporate'
   },
   {
