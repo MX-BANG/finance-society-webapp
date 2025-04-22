@@ -196,7 +196,7 @@ export default function EventsPage() {
           className="text-center mt-12"
           variants={itemVariants}
         >
-          <h2 className="text-2xl font-semibold mb-4">Can't Find What You're Looking For?</h2>
+          <h2 className="text-2xl font-semibold mb-4">Can&apos;t Find What You&apos;re Looking For?</h2>
           <p className="text-gray-600 mb-6">
             Subscribe to our newsletter to stay updated on upcoming events and opportunities.
           </p>
