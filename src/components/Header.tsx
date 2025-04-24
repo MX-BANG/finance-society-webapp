@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-2">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-primary-navy" aria-label="Finance Society Home">
             <Image
