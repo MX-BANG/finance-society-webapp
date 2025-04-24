@@ -199,11 +199,11 @@ const teamMembers = [
 
   // Events
   {
-    name: 'Abdul Qadir',
-    role: 'Executive Director',
+    name: 'Maha Yasir',
+    role: ' Executive Director',
     bio: '',
-    image: '/ExecutiveDirectors/Abdul Qadir.webp',
-    linkedin: 'https://www.linkedin.com/in/abdul-qadir-akhlaq/',
+    image: '/ExecutiveDirectors/Maha Yasir.webp',
+    linkedin: 'https://www.linkedin.com/in/maha-yasir-a37768286/',
     category: 'Events'
   },
   {
@@ -230,23 +230,16 @@ const teamMembers = [
     linkedin: '#',
     category: 'Events'
   },
-  {
-    name: 'Maha Yasir',
-    role: 'Director',
-    bio: '',
-    image: '/Directors/Maha Yasir.webp',
-    linkedin: '#',
-    category: 'Events'
-  },
+  
   
 
   // Corporate
   {
-    name: 'Syed Bilal Hassan',
+    name: 'Abdul Qadir',
     role: 'Executive Director',
     bio: '',
-    image: '/ExecutiveDirectors/Syed Bilal Hassan.webp',
-    linkedin: 'https://www.linkedin.com/in/syed-bilal-hassan02/',
+    image: '/ExecutiveDirectors/Abdul Qadir.webp',
+    linkedin: 'https://www.linkedin.com/in/abdul-qadir-akhlaq/',
     category: 'Corporate'
   },
   {
