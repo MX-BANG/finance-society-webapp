@@ -278,7 +278,7 @@ export default function Home() {
             variants={itemVariants}
           >
             <Link 
-              href="/become-a-sponsor" 
+              href="https://forms.gle/rZcWJsUQo36GY4nz9" 
               className="text-sm text-gray-500 hover:text-primary-navy transition-colors underline underline-offset-4 decoration-1"
             >
               Become a Sponsor
