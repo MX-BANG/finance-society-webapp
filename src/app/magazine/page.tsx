@@ -55,6 +55,8 @@ const categories = [
 const MagazinePage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Articles');
   const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -80,9 +82,25 @@ const MagazinePage = () => {
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    // Add your subscription logic here
-    console.log('Subscribed with:', email);
-    setEmail('');
+    
+    // Basic email validation
+    if (!email.includes('@') || !email.includes('.')) {
+      alert('Please enter a valid email address');
+      return;
+    }
+
+    setIsLoading(true);
+    
+    // Simulate API call with timeout
+    setTimeout(() => {
+      console.log('Mock subscription for:', email);
+      setIsSubscribed(true);
+      setEmail('');
+      setIsLoading(false);
+      
+      // Reset subscription message after 3 seconds
+      setTimeout(() => setIsSubscribed(false), 3000);
+    }, 1000);
   };
 
   return (
@@ -196,11 +214,28 @@ const MagazinePage = () => {
                 className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 flex-grow max-w-md"
                 required
                 aria-label="Email address for newsletter subscription"
+                disabled={isLoading}
               />
-              <Button variant="secondary" type="submit">
-                Subscribe
+              <Button 
+                variant="secondary" 
+                type="submit"
+                disabled={isLoading}
+              >
+                {isLoading ? 'Subscribing...' : 'Subscribe'}
               </Button>
             </form>
+            
+            {/* Success message */}
+            {isSubscribed && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className="mt-4 p-3 bg-green-100 text-green-700 rounded-lg inline-block"
+              >
+                Thank you for subscribing! 🎉
+              </motion.div>
+            )}
           </div>
         </motion.div>
       </motion.div>
