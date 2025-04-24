@@ -8,13 +8,13 @@ import Image from 'next/image';
 const events = [
   {
     id: 1,
-    title: 'International Stock Challenge',
-    date: 'April 25, 2025',
+    title: 'IOBM Stock Challenge',
+    date: 'April 29 2025',
     time: '10:00 AM - 4:00 PM',
     location: 'Institute of Business and Management',
     description: 'Join our annual trading competition and test your skills in a simulated market environment. Prizes for top performers!',
     category: 'Competition',
-    registrationDeadline: 'April 16, 2025',
+    registrationDeadline: 'April 26, 2025',
     registrationLink: 'https://forms.gle/JkhGQmrToS2jauq27'
   },
 ];
@@ -89,7 +89,7 @@ export default function Home() {
             className="text-4xl md:text-6xl font-bold text-white mb-6"
             variants={itemVariants}
           >
-            International Stock Challenge
+            IOBM Stock Challenge
           </motion.h1>
           <motion.p 
             className="text-xl text-gray-200 mb-8"
