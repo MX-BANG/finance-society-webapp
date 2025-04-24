@@ -97,7 +97,7 @@ export default function Home() {
           >
             For the first time ever at Institute of Business Management, Finance
             Society is presenting an exciting competition that will mimic the
-            real-world trading scenario,establishing the Trader&rsquo;s Mindset for the youth
+            real-world trading scenario, establishing the Trader&rsquo;s Mindset for the youth
           </motion.p>
           <motion.div 
             className="flex flex-wrap justify-center gap-4"
