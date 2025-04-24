@@ -452,24 +452,27 @@ const TeamPage = () => {
         )}
 
         {/* Join Our Team Section */}
-        <motion.div 
-          className="text-center mt-12"
-          variants={itemVariants}
-        >
-          <h2 className="text-2xl font-semibold mb-4">Join Our Team</h2>
-          <p className="text-gray-600 mb-6">
-            We&apos;re always looking for passionate individuals to join our team. 
-            If you&apos;re interested in contributing to the Finance Society, we&apos;d love to hear from you.
-          </p>
-          <Link 
-            href="https://forms.gle/qNLhAnMURrMwFAoe7" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="btn-primary inline-block"
+        // Replace the existing "Join Our Team" section with this:
+          <motion.div 
+            className="text-center mt-12"
+            variants={itemVariants}
           >
-            Apply Now
-          </Link>
-        </motion.div>
+            <h2 className="text-2xl font-semibold mb-4">Join Our Team</h2>
+            <p className="text-gray-600 mb-6">
+              We&apos;re always looking for passionate individuals to join our team. 
+              If you&apos;re interested in contributing to the Finance Society, we&apos;d love to hear from you.
+            </p>
+            <motion.a
+              href="https://forms.gle/qNLhAnMURrMwFAoe7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-primary-navy text-white rounded-lg hover:bg-blue-700 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Apply Now
+            </motion.a>
+          </motion.div>
       </motion.div>
     </div>
   );
