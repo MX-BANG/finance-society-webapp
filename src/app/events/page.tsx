@@ -7,13 +7,13 @@ import Image from 'next/image';
 const events = [
   {
     id: 1,
-    title: 'International Stock Challenge',
-    date: 'April 25, 2025',
+    title: 'IOBM Stock Challenge',
+    date: 'April 29, 2025',
     time: '10:00 AM - 4:00 PM',
     location: 'Institute of Business and Management',
     description: 'Join our annual trading competition and test your skills in a simulated market environment. Prizes for top performers!',
     category: 'Competition',
-    registrationDeadline: 'April 16, 2025',
+    registrationDeadline: 'April 27, 2025',
     registrationLink: 'https://docs.google.com/forms/...', // Google Form URL
     detailsLink: '/isc', // Link for the entire card
     image: '/events/stockchallenge.webp' 
