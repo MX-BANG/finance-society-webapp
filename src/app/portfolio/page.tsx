@@ -65,7 +65,7 @@ const events = [
 
 export default function PortfolioPage() {
   return (
-    <div className="space-y-15 py-5">
+    <div className="space-y-15 py-0">
       {/* Hero Section */}
       <motion.section className="relative h-[90vh] flex items-center justify-center text-center pt-0">
         <div className="absolute inset-0 z-0">
