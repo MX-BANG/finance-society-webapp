@@ -462,7 +462,7 @@ const TeamPage = () => {
             If you&apos;re interested in contributing to the Finance Society, we&apos;d love to hear from you.
           </p>
           <Link 
-            href="https://docs.google.com/forms/d/e/your-form-id/viewform" 
+            href="https://forms.gle/qNLhAnMURrMwFAoe7" 
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-primary inline-block"
