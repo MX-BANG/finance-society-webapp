@@ -30,14 +30,14 @@ const teamMembers = [
     linkedin: 'https://www.linkedin.com/in/manoj-lohana/',
     category: 'Top Bodies'
   },
-  {
-    name: 'Muhammad Hammad',
-    role: 'General Secretary',
-    bio: 'The driving force behind our operations as General Secretary!',
-    image: '/Team/MuhammadHammad.webp',
-    linkedin: 'https://www.linkedin.com/in/muhammad-h-4ab414203/',
-    category: 'Top Bodies'
-  },
+  // {
+  //   name: 'Muhammad Hammad',
+  //   role: 'General Secretary',
+  //   bio: 'The driving force behind our operations as General Secretary!',
+  //   image: '/Team/MuhammadHammad.webp',
+  //   linkedin: 'https://www.linkedin.com/in/muhammad-h-4ab414203/',
+  //   category: 'Top Bodies'
+  // },
   {
     name: 'Hafsa Sohail',
     role: 'Finance Secretary',
@@ -123,18 +123,18 @@ const teamMembers = [
     category: 'Publications'
   },
   {
-    name: 'Amna Ayub Siddiqui',
-    role: 'Director',
-    bio: '',
-    image: '/Team/pfpicon.webp',
-    linkedin: '#',
-    category: 'Publications'
-  },
-  {
     name: 'Syed Ibrahim Hussain',
     role: 'Director',
     bio: '',
     image: '/Directors/Syed Ibrahim Hussain.webp',
+    linkedin: '#',
+    category: 'Publications'
+  },
+  {
+    name: 'Amna Ayub Siddiqui',
+    role: 'Director',
+    bio: '',
+    image: '/Team/pfpicon.webp',
     linkedin: '#',
     category: 'Publications'
   },
