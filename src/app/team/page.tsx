@@ -64,7 +64,7 @@ const teamMembers = [
   },
   {
     name: 'Moiz Ali Siddiqui',
-    role: 'Developer',
+    role: 'Web Master',
     bio: 'Full Stack Developer with AI integration expertise.',
     image: '/Team/moiz-picture.webp',
     linkedin: 'https://www.linkedin.com/in/moizalisiddiqui/',
