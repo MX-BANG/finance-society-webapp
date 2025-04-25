@@ -452,7 +452,6 @@ const TeamPage = () => {
         )}
 
         {/* Join Our Team Section */}
-        // Replace the existing "Join Our Team" section with this:
           <motion.div 
             className="text-center mt-12"
             variants={itemVariants}
