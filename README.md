@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Finance Society Website - IoBM
+This project is the official website for the Finance Society of Institute of Business Management (IoBM). The website serves as a platform to provide important information about the society, its events, and to facilitate online registrations for its various activities.
 
-## Getting Started
+Built With
+The website is built using Next.js, a React-based framework that enables fast server-side rendering and static site generation. It provides an optimal development experience with features like automatic page routing, and efficient data-fetching mechanisms.
 
-First, run the development server:
+Key Technologies and Tools:
+Next.js: A React framework for building dynamic web applications with server-side rendering and static generation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+TypeScript: A superset of JavaScript that introduces static typing, enhancing code quality and development efficiency.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+React: A popular JavaScript library for building user interfaces with reusable components.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Vercel: The platform used for deployment, providing automatic scaling and a seamless experience for Next.js applications.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Geist UI: A modern design system integrated into the project to provide a clean, minimalistic, and functional user interface.
 
-## Learn More
+Features
+Event Registration: Users can easily register for upcoming events organized by the Finance Society.
 
-To learn more about Next.js, take a look at the following resources:
+Confirmation Emails: Upon registration, users receive confirmation emails with event details and next steps.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Responsive Design: The website is fully responsive, offering a seamless experience across all device types.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributing
+Feel free to contribute to this project! Open issues, submit pull requests, or suggest improvements. Please make sure to follow best practices and ensure your changes align with the overall project goals.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
